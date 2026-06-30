@@ -1,0 +1,258 @@
+{
+  "topBar": {
+    "locationText": "Lajpat Nagar, New Delhi - 110021",
+    "linkText": "VIRTUAL MEETING",
+    "linkHref": "#virtual-meeting"
+  },
+  "header": {
+    "navItems": [
+      { "label": "HOME", "href": "#" },
+      { "label": "WHAT WE OFFER", "href": "/what-we-offer" },
+      { "label": "CALCULATORS", "href": "/calculators" },
+      { "label": "WEALTH INSIGHTS", "href": "/wealth-insights" },
+      { "label": "EVENTS", "href": "/events" },
+      { "label": "OUR STORY", "href": "/our-story" }
+    ],
+    "loginText": "LOGIN",
+    "loginHref": "#login"
+  },
+  "hero": {
+    "tagline": "Relationships Beyond Investments",
+    "headlinePrefix": "Your Financial Future, Handled with ",
+    "headlineHighlight": "Care.",
+    "description": "Your wealth deserves expert care. With nearly two decades of experience, WealthKare helps you make smarter financial decisions with confidence and trust.",
+    "ctaText": "Talk to an Advisor",
+    "ctaHref": "/#get-in-touch"
+  },
+  "stats": {
+    "eyebrow": "OUR TRACK RECORD",
+    "items": [
+      {
+        "id": "aum",
+        "value": 1000,
+        "suffix": "+",
+        "label": "Crore AUM",
+        "icon": "aum"
+      },
+      {
+        "id": "clients",
+        "value": 2000,
+        "suffix": "+",
+        "label": "Happy Clients",
+        "icon": "clients"
+      },
+      {
+        "id": "products",
+        "value": 20,
+        "suffix": "+",
+        "label": "Products",
+        "icon": "products"
+      },
+      {
+        "id": "years",
+        "value": 20,
+        "suffix": "+",
+        "label": "Years in industry",
+        "icon": "years"
+      }
+    ]
+  },
+  "services": {
+    "eyebrow": "WHAT WE OFFER",
+    "subtext": "From mutual funds to unlisted equities, we offer every solution your wealth journey needs — all under one trusted roof. Eight services. One relationship.",
+    "items": [
+      {
+        "id": "mutual-funds",
+        "restingTitle": "MUTUAL FUNDS / SIF",
+        "hoverTitle": "Mutual Funds & SIF",
+        "image": "/offers-mutual-funds.png",
+        "description": "Professionally managed, diversified portfolios — built around your goals, reviewed regularly, and distributed through Regular Plans only."
+      },
+      {
+        "id": "pms",
+        "restingTitle": "PMS",
+        "hoverTitle": "Portfolio Management Services",
+        "image": "/offers-pms.png",
+        "description": "Individually managed equity portfolios for investors with ₹50 lakhs and above — direct ownership, transparent reporting, active strategy."
+      },
+      {
+        "id": "aif",
+        "restingTitle": "AIF",
+        "hoverTitle": "Alternative Investment Funds",
+        "image": "/offers-aif.png",
+        "description": "Institutional-grade alternative strategies — private equity, real estate, and hedge funds — accessible to qualified investors."
+      },
+      {
+        "id": "bonds-ncds",
+        "restingTitle": "BONDS / NCDs",
+        "hoverTitle": "Bonds & NCDs",
+        "image": "/offers-bonds.png",
+        "description": "Fixed-income instruments from rated issuers — predictable cash flows, capital preservation, and yields that outperform conventional deposits."
+      },
+      {
+        "id": "corporate-fds",
+        "restingTitle": "CORPORATE FDs",
+        "hoverTitle": "Corporate Fixed Deposits",
+        "image": "/offers-fds.png",
+        "description": "Higher-yield fixed deposits from NBFC and corporate issuers — better returns on your fixed-income allocation without equity risk."
+      },
+      {
+        "id": "unlisted-equities",
+        "restingTitle": "UNLISTED EQUITIES",
+        "hoverTitle": "Unlisted Equities",
+        "image": "/offers-equities.png",
+        "description": "Pre-IPO and unlisted equity opportunities — early access to companies before they list, with asymmetric return potential for informed investors."
+      },
+      {
+        "id": "insurance",
+        "restingTitle": "INSURANCE",
+        "hoverTitle": "Insurance",
+        "image": "/offers-insurance.png",
+        "description": "Protection that complements your wealth — term cover, health insurance, and general insurance structured to safeguard what you've built."
+      },
+      {
+        "id": "loans",
+        "restingTitle": "LOANS",
+        "hoverTitle": "Loans",
+        "image": "/offers-loans.png",
+        "description": "Home, car, and personal loans facilitated through trusted banking and NBFC partners — liquidity solutions when you need them."
+      }
+    ]
+  },
+  "portal": {
+    "eyebrow": "PROPRIETARY PORTAL",
+    "headline": "Your Entire Portfolio, In One Place",
+    "description": "Track every investment — mutual funds, stocks, fixed deposits, and insurance — in a single secure dashboard, on web and mobile.",
+    "bullets": [
+      "Live portfolio value & 1-day change",
+      "Goal tracking & planning",
+      "All assets, one login",
+      "iOS & Android app"
+    ],
+    "loginText": "LOGIN",
+    "loginHref": "#portal-login"
+  },
+  "howItWorks": {
+    "eyebrow": "HOW IT WORKS",
+    "headline": "How it Works?",
+    "ctaText": "Talk to an Advisor",
+    "ctaHref": "/#get-in-touch",
+    "steps": [
+      {
+        "id": 1,
+        "title": "We meet",
+        "desc": "Arrange a Meeting"
+      },
+      {
+        "id": 2,
+        "title": "Risk Profiling",
+        "desc": "Understand your risk taking ability"
+      },
+      {
+        "id": 3,
+        "title": "Goal Planning",
+        "desc": "Identify your financial goals"
+      },
+      {
+        "id": 4,
+        "title": "Invest Online",
+        "desc": "Invest in the best identified investment avenues"
+      },
+      {
+        "id": 5,
+        "title": "Goal Monitoring",
+        "desc": "Track your goals & see them fulfil"
+      }
+    ]
+  },
+  "testimonials": {
+    "eyebrow": "TRUSTED RELATIONSHIPS",
+    "headline": "In Their Words",
+    "disclaimer": "Testimonials reflect individual client experiences and are not indicative of future results.",
+    "items": [
+      {
+        "id": 1,
+        "quote": "What I value most is the clarity. Every recommendation comes with a clear reason, and I never feel rushed into a decision.",
+        "author": "Rajesh M.",
+        "tag": "Business Owner, Delhi"
+      },
+      {
+        "id": 2,
+        "quote": "The team treats my family's goals as their own. In fifteen years, the relationship has only grown stronger.",
+        "author": "Anita S.",
+        "tag": "Doctor, Gurgaon"
+      },
+      {
+        "id": 3,
+        "quote": "They simplified what felt overwhelming. Today I understand exactly where my money is and why.",
+        "author": "Vikram K.",
+        "tag": "Senior Executive, Noida"
+      },
+      {
+        "id": 4,
+        "quote": "Responsive, transparent, and always available when it matters. That peace of mind is worth a great deal.",
+        "author": "Priya N.",
+        "tag": "Entrepreneur, Delhi"
+      },
+      {
+        "id": 5,
+        "quote": "What sets them apart is the planning, not just the products. My goals drive every conversation.",
+        "author": "Sandeep R.",
+        "tag": "NRI Client, Dubai"
+      },
+      {
+        "id": 6,
+        "quote": "Honest advice, even when it isn't what I expected to hear. That candour is why I've stayed.",
+        "author": "Meera T.",
+        "tag": "Retired Professional, Delhi"
+      }
+    ]
+  },
+  "events": {
+    "eyebrow": "TRUSTED ENGAGEMENTS",
+    "headline": "Our Events",
+    "featured": {
+      "image": "/images/events/event_featured.jpg",
+      "caption": "Annual Investor Summit 2025 — Founder Mukesh Gupta addressing clients on long-term wealth strategy."
+    },
+    "mosaic": [
+      {
+        "id": 1,
+        "image": "/images/events/event_mosaic_1.jpg",
+        "alt": "WealthKare team at event booth",
+        "caption": "Wealthkare Expo Booth · 2024"
+      },
+      {
+        "id": 2,
+        "image": "/images/events/event_mosaic_2.jpg",
+        "alt": "WealthKare representatives presenting awards",
+        "caption": "Investor Networking · 2024"
+      },
+      {
+        "id": 3,
+        "image": "/images/events/event_mosaic_3.png",
+        "alt": "Seminar audience",
+        "caption": "Global Markets Summit · 2024"
+      },
+      {
+        "id": 4,
+        "image": "/images/events/event_mosaic_4.png",
+        "alt": "Networking reception",
+        "caption": "Client Evening · 2024"
+      },
+      {
+        "id": 5,
+        "image": "/images/events/event_mosaic_5.png",
+        "alt": "Finance workshop roundtable",
+        "caption": "Strategy Workshop · 2024"
+      },
+      {
+        "id": 6,
+        "image": "/images/events/event_mosaic_6.png",
+        "alt": "Conference keynote address",
+        "caption": "Market Trends Briefing · 2024"
+      }
+    ]
+  }
+}
+
