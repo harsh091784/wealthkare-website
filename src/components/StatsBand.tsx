@@ -4,24 +4,37 @@ import { useEffect, useRef, useState } from "react";
 import content from "@/content/homepage.json";
 
 export default function StatsBand() {
-  const { eyebrow, items } = content.stats;
+  const { eyebrow, items: rawItems } = content.stats;
+
+  const foundingYear = 2003;
+  const currentYear = new Date().getFullYear();
+  const yearsInIndustry = currentYear - foundingYear;
+
+  // Map raw config items to inject dynamically calculated years
+  const items = rawItems.map(item => {
+    if (item.id === "years") {
+      return { ...item, value: yearsInIndustry };
+    }
+    return item;
+  });
+
   const sectionRef = useRef<HTMLDivElement>(null);
   const [hasIntersected, setHasIntersected] = useState(false);
   const [counts, setCounts] = useState<{ [key: string]: number }>(() => {
     const isHeadless = typeof navigator !== "undefined" && /HeadlessChrome/i.test(navigator.userAgent);
     if (isHeadless) {
       return {
-        aum: 1000,
-        clients: 2000,
-        products: 20,
-        years: 20
+        aum: 1200,
+        clients: 2500,
+        years: yearsInIndustry,
+        products: 15
       };
     }
     return {
       aum: 0,
       clients: 0,
-      products: 0,
-      years: 0
+      years: 0,
+      products: 0
     };
   });
 

@@ -29,31 +29,31 @@
     "items": [
       {
         "id": "aum",
-        "value": 1000,
+        "value": 1200,
         "suffix": "+",
         "label": "Crore AUM",
         "icon": "aum"
       },
       {
         "id": "clients",
-        "value": 2000,
+        "value": 2500,
         "suffix": "+",
         "label": "Happy Clients",
         "icon": "clients"
       },
       {
+        "id": "years",
+        "value": 23,
+        "suffix": "+",
+        "label": "Years in Industry",
+        "icon": "years"
+      },
+      {
         "id": "products",
-        "value": 20,
+        "value": 15,
         "suffix": "+",
         "label": "Products",
         "icon": "products"
-      },
-      {
-        "id": "years",
-        "value": 20,
-        "suffix": "+",
-        "label": "Years in industry",
-        "icon": "years"
       }
     ]
   },
