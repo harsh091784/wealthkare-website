@@ -39,7 +39,7 @@ export default function Hero() {
                 {ctaText}
               </a>
               <a
-                href="https://wa.me/919810184368"
+                href="https://wa.me/919868080561"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="flex items-center justify-center gap-2 h-11 bg-[#1EBE57] hover:bg-[#1aa84c] text-white text-[10px] font-extrabold px-8 rounded-full transition-all tracking-widest shadow-md hover:shadow-lg uppercase"

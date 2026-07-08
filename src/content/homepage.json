@@ -21,7 +21,7 @@
     "headlinePrefix": "Your Financial Future, Handled with ",
     "headlineHighlight": "Care.",
     "description": "Your wealth deserves expert care. With nearly two decades of experience, WealthKare helps you make smarter financial decisions with confidence and trust.",
-    "ctaText": "Talk to an Advisor",
+    "ctaText": "Contact Us",
     "ctaHref": "/#get-in-touch"
   },
   "stats": {
@@ -135,7 +135,7 @@
   "howItWorks": {
     "eyebrow": "HOW IT WORKS",
     "headline": "How it Works?",
-    "ctaText": "Talk to an Advisor",
+    "ctaText": "Contact Us",
     "ctaHref": "/#get-in-touch",
     "steps": [
       {

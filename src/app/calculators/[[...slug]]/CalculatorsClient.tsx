@@ -593,7 +593,7 @@ export default function CalculatorsClient({ initialSlug, explainers }: Props) {
                     href="/#get-in-touch"
                     className="bg-[#231F20] hover:bg-[#3d3637] text-white text-[10px] font-black tracking-widest px-8 py-3.5 rounded-full transition-all uppercase shadow-md inline-flex items-center justify-center gap-1.5"
                   >
-                    Talk to an Advisor &rarr;
+                    Contact Us &rarr;
                   </a>
                 </div>
               )}
@@ -1191,7 +1191,7 @@ export default function CalculatorsClient({ initialSlug, explainers }: Props) {
                             href="/#get-in-touch"
                             className="bg-[#231F20] hover:bg-[#3d3637] text-white text-center text-[10px] font-black tracking-widest px-8 py-3.5 rounded-full transition-all duration-300 shadow-md uppercase inline-flex items-center justify-center gap-1.5"
                           >
-                            Talk to an Advisor &rarr;
+                            Contact Us &rarr;
                           </a>
 
                           <span className="text-[9px] text-gray-400 font-bold tracking-wider mt-3 leading-relaxed">

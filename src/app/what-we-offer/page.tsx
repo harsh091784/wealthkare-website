@@ -337,7 +337,7 @@ export default function WhatWeOfferPage() {
                         href="/#get-in-touch"
                         className="bg-brand-gold hover:bg-[#a67e3f] text-white px-7 py-3 rounded-full text-[10px] font-black tracking-widest uppercase transition-all shadow-sm hover:shadow-md"
                       >
-                        Talk to an Advisor
+                        Contact Us
                       </Link>
                     </div>
 
@@ -392,7 +392,7 @@ export default function WhatWeOfferPage() {
             href="/#get-in-touch"
             className="bg-brand-gold hover:bg-[#a67e3f] text-white px-8 py-3.5 rounded-full text-xs font-black tracking-widest uppercase transition-all shadow-md hover:shadow-lg"
           >
-            Talk to an Advisor
+            Contact Us
           </Link>
         </div>
       </section>

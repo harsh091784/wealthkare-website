@@ -361,7 +361,7 @@ export default function Calculator() {
                   href="/#get-in-touch"
                   className="bg-[#231F20] hover:bg-[#3d3637] text-white text-center text-[10px] font-black tracking-widest px-8 py-3.5 rounded-full transition-all duration-300 shadow-md uppercase inline-flex items-center justify-center gap-1.5"
                 >
-                  Talk to an Advisor &rarr;
+                  Contact Us &rarr;
                 </a>
 
                 {/* Compliance note */}
