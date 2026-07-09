@@ -88,6 +88,12 @@ export default function StatsBand() {
 
       if (frame >= totalFrames) {
         clearInterval(timer);
+        // Explicitly set exact target values to prevent any rounding discrepancies
+        const finalCounts = items.reduce((acc, item) => {
+          acc[item.id] = item.value;
+          return acc;
+        }, {} as { [key: string]: number });
+        setCounts(finalCounts);
       }
     }, frameRate);
 

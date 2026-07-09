@@ -3,6 +3,7 @@
 import Image from "next/image";
 import ArcRing from "@/components/ArcRing";
 import content from "@/content/homepage.json";
+import { QRCodeSVG } from "qrcode.react";
 
 export default function PortalShowcase() {
   const { eyebrow, headline, description, bullets, loginText, loginHref } = content.portal;
@@ -106,6 +107,8 @@ export default function PortalShowcase() {
               {/* Login Pill Button */}
               <a
                 href={loginHref}
+                target="_blank"
+                rel="noopener noreferrer"
                 className="bg-brand-gold hover:bg-[#a67e3f] text-white text-center text-xs font-black tracking-widest px-8 py-4 rounded-full transition-all duration-300 shadow-md hover:shadow-lg uppercase"
               >
                 {loginText}
@@ -115,7 +118,9 @@ export default function PortalShowcase() {
               <div className="flex flex-row items-center gap-3 justify-center sm:justify-start">
                 {/* App Store badge */}
                 <a
-                  href="#app-store"
+                  href="http://apps.apple.com/us/app/wealthcareindia/id1635329624?uo=4&at=11l6hc&ct=fnd"
+                  target="_blank"
+                  rel="noopener noreferrer"
                   className="flex items-center gap-2 bg-black hover:bg-zinc-900 text-white rounded-lg px-3.5 py-1.5 transition-all duration-300 shadow-sm border border-zinc-800"
                 >
                   <svg viewBox="0 0 24 24" className="w-5 h-5 fill-white flex-shrink-0">
@@ -129,7 +134,9 @@ export default function PortalShowcase() {
 
                 {/* Google Play badge */}
                 <a
-                  href="#google-play"
+                  href="https://play.google.com/store/apps/details?id=tvs.android.excelnet.wealthcare&hl=en"
+                  target="_blank"
+                  rel="noopener noreferrer"
                   className="flex items-center gap-2 bg-black hover:bg-zinc-900 text-white rounded-lg px-3.5 py-1.5 transition-all duration-300 shadow-sm border border-zinc-800"
                 >
                   <svg viewBox="0 0 24 24" className="w-5 h-5 flex-shrink-0">
@@ -150,30 +157,8 @@ export default function PortalShowcase() {
             <div className="flex flex-row items-center gap-6 mt-6 border-t border-gray-100 pt-6">
               {/* App Store QR */}
               <div className="flex flex-row items-center gap-2">
-                <div className="w-12 h-12 bg-white p-1 rounded-lg border border-gray-250/60 shadow-sm flex items-center justify-center flex-shrink-0" title="QR code — replace with real app store link QR">
-                  <svg viewBox="0 0 100 100" className="w-full h-full">
-                    {/* Finder patterns */}
-                    <rect x="10" y="10" width="22" height="22" fill="#231F20" stroke="white" strokeWidth="1.5"/>
-                    <rect x="14" y="14" width="14" height="14" fill="white"/>
-                    <rect x="17" y="17" width="8" height="8" fill="#BD924D"/>
-                    
-                    <rect x="68" y="10" width="22" height="22" fill="#231F20" stroke="white" strokeWidth="1.5"/>
-                    <rect x="72" y="14" width="14" height="14" fill="white"/>
-                    <rect x="75" y="17" width="8" height="8" fill="#BD924D"/>
-
-                    <rect x="10" y="68" width="22" height="22" fill="#231F20" stroke="white" strokeWidth="1.5"/>
-                    <rect x="14" y="72" width="14" height="14" fill="white"/>
-                    <rect x="17" y="75" width="8" height="8" fill="#BD924D"/>
-                    
-                    {/* Fake QR blocks */}
-                    <rect x="42" y="15" width="8" height="8" fill="#231F20"/>
-                    <rect x="38" y="30" width="12" height="6" fill="#BD924D"/>
-                    <rect x="44" y="44" width="18" height="8" fill="#231F20"/>
-                    <rect x="15" y="44" width="8" height="12" fill="#BD924D"/>
-                    <rect x="68" y="44" width="8" height="16" fill="#231F20"/>
-                    <rect x="44" y="68" width="12" height="12" fill="#BD924D"/>
-                    <rect x="72" y="72" width="8" height="8" fill="#231F20"/>
-                  </svg>
+                <div className="w-[80px] h-[80px] bg-white p-1 rounded-lg border border-gray-250/60 shadow-sm flex items-center justify-center flex-shrink-0">
+                  <QRCodeSVG value="http://apps.apple.com/us/app/wealthcareindia/id1635329624?uo=4&at=11l6hc&ct=fnd" size={72} level="M" />
                 </div>
                 <span className="text-[9px] font-black text-gray-500 tracking-wider uppercase leading-none">
                   Scan to download<br /><span className="text-[#BD924D] font-black mt-0.5 block">iOS</span>
@@ -182,30 +167,8 @@ export default function PortalShowcase() {
 
               {/* Google Play QR */}
               <div className="flex flex-row items-center gap-2">
-                <div className="w-12 h-12 bg-white p-1 rounded-lg border border-gray-250/60 shadow-sm flex items-center justify-center flex-shrink-0" title="QR code — replace with real app store link QR">
-                  <svg viewBox="0 0 100 100" className="w-full h-full">
-                    {/* Finder patterns */}
-                    <rect x="10" y="10" width="22" height="22" fill="#231F20" stroke="white" strokeWidth="1.5"/>
-                    <rect x="14" y="14" width="14" height="14" fill="white"/>
-                    <rect x="17" y="17" width="8" height="8" fill="#BD924D"/>
-                    
-                    <rect x="68" y="10" width="22" height="22" fill="#231F20" stroke="white" strokeWidth="1.5"/>
-                    <rect x="72" y="14" width="14" height="14" fill="white"/>
-                    <rect x="75" y="17" width="8" height="8" fill="#BD924D"/>
-
-                    <rect x="10" y="68" width="22" height="22" fill="#231F20" stroke="white" strokeWidth="1.5"/>
-                    <rect x="14" y="72" width="14" height="14" fill="white"/>
-                    <rect x="17" y="75" width="8" height="8" fill="#BD924D"/>
-                    
-                    {/* Different pattern for variety */}
-                    <rect x="48" y="18" width="8" height="8" fill="#BD924D"/>
-                    <rect x="42" y="32" width="10" height="10" fill="#231F20"/>
-                    <rect x="38" y="48" width="16" height="6" fill="#BD924D"/>
-                    <rect x="18" y="42" width="6" height="10" fill="#231F20"/>
-                    <rect x="70" y="38" width="10" height="16" fill="#231F20"/>
-                    <rect x="48" y="62" width="10" height="10" fill="#BD924D"/>
-                    <rect x="68" y="68" width="6" height="6" fill="#231F20"/>
-                  </svg>
+                <div className="w-[80px] h-[80px] bg-white p-1 rounded-lg border border-gray-250/60 shadow-sm flex items-center justify-center flex-shrink-0">
+                  <QRCodeSVG value="https://play.google.com/store/apps/details?id=tvs.android.excelnet.wealthcare&hl=en" size={72} level="M" />
                 </div>
                 <span className="text-[9px] font-black text-gray-500 tracking-wider uppercase leading-none">
                   Scan to download<br /><span className="text-[#BD924D] font-black mt-0.5 block">Android</span>

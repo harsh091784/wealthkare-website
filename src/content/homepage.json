@@ -13,8 +13,8 @@
       { "label": "EVENTS", "href": "/events" },
       { "label": "OUR STORY", "href": "/our-story" }
     ],
-    "loginText": "LOGIN",
-    "loginHref": "#login"
+    "loginText": "Portfolio Login",
+    "loginHref": "https://wealthcareindia.investwell.app/"
   },
   "hero": {
     "tagline": "Relationships Beyond Investments",
@@ -129,8 +129,8 @@
       "All assets, one login",
       "iOS & Android app"
     ],
-    "loginText": "LOGIN",
-    "loginHref": "#portal-login"
+    "loginText": "Portfolio Login",
+    "loginHref": "https://wealthcareindia.investwell.app/"
   },
   "howItWorks": {
     "eyebrow": "HOW IT WORKS",

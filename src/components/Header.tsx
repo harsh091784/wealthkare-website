@@ -64,6 +64,8 @@ export default function Header() {
         <div className="hidden lg:flex">
           <a
             href={loginHref}
+            target="_blank"
+            rel="noopener noreferrer"
             className="bg-brand-gold hover:bg-[#a67e3f] text-white text-[10px] font-extrabold px-6 py-2.5 rounded-full transition-all tracking-widest shadow-sm"
           >
             {loginText}
@@ -105,6 +107,8 @@ export default function Header() {
           </nav>
           <a
             href={loginHref}
+            target="_blank"
+            rel="noopener noreferrer"
             onClick={() => setMobileMenuOpen(false)}
             className="w-full text-center bg-brand-gold hover:bg-[#a67e3f] text-white text-xs font-bold py-2.5 rounded-full transition-all tracking-widest"
           >
