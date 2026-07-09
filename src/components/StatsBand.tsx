@@ -30,11 +30,12 @@ export default function StatsBand() {
         products: 15
       };
     }
+    // Start at 90% of final values
     return {
-      aum: 0,
-      clients: 0,
-      years: 0,
-      products: 0
+      aum: 1080,
+      clients: 2250,
+      years: Math.floor(yearsInIndustry * 0.9),
+      products: 13
     };
   });
 
@@ -63,7 +64,7 @@ export default function StatsBand() {
     if (isHeadless) return;
     if (!hasIntersected) return;
 
-    const duration = 1800; // Animation duration (~1.8 seconds)
+    const duration = 1000; // Animation duration (1.0 second max)
     const frameRate = 1000 / 60; // 60fps
     const totalFrames = Math.round(duration / frameRate);
     let frame = 0;
@@ -76,7 +77,9 @@ export default function StatsBand() {
       const progress = easeOutCubic(frame / totalFrames);
 
       const newCounts = items.reduce((acc, item) => {
-        const currentValue = Math.min(Math.round(progress * item.value), item.value);
+        const startValue = Math.floor(item.value * 0.9);
+        const diff = item.value - startValue;
+        const currentValue = startValue + Math.min(Math.round(progress * diff), diff);
         acc[item.id] = currentValue;
         return acc;
       }, {} as { [key: string]: number });
