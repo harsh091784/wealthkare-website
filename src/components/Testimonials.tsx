@@ -9,6 +9,7 @@ export default function Testimonials() {
   const [activeIndex, setActiveIndex] = useState(0);
   const [isHovered, setIsHovered] = useState(false);
   const [isMobile, setIsMobile] = useState(false);
+  const [expandedId, setExpandedId] = useState<string | null>(null);
   const timerRef = useRef<NodeJS.Timeout | null>(null);
 
   useEffect(() => {
@@ -20,29 +21,45 @@ export default function Testimonials() {
     return () => window.removeEventListener("resize", checkMobile);
   }, []);
 
-  // Normalise list navigation
+  // Collapse expanded slide on navigation to avoid visual weirdness
   const nextSlide = () => {
+    setExpandedId(null);
     setActiveIndex((prev) => (prev + 1) % items.length);
   };
 
   const prevSlide = () => {
+    setExpandedId(null);
     setActiveIndex((prev) => (prev - 1 + items.length) % items.length);
   };
 
-  // Auto-advance loop (5 seconds). Resets on activeIndex change to avoid sudden jumps after clicks.
+  // Auto-advance loop (5 seconds). Resets on activeIndex/expandedId change.
+  // The auto-scroll pauses if hovered or if any testimonial is expanded.
   useEffect(() => {
-    if (isHovered) return;
+    if (isHovered || expandedId !== null) return;
 
     timerRef.current = setInterval(() => {
       nextSlide();
-    }, 2500);
+    }, 5000);
 
     return () => {
       if (timerRef.current) {
         clearInterval(timerRef.current);
       }
     };
-  }, [activeIndex, isHovered]);
+  }, [activeIndex, isHovered, expandedId]);
+
+  // Global click listener to collapse card if clicking anywhere else
+  useEffect(() => {
+    const handleGlobalClick = () => {
+      setExpandedId(null);
+    };
+    if (expandedId !== null) {
+      window.addEventListener("click", handleGlobalClick);
+    }
+    return () => {
+      window.removeEventListener("click", handleGlobalClick);
+    };
+  }, [expandedId]);
 
   return (
     <section
@@ -68,9 +85,10 @@ export default function Testimonials() {
           In Their <span className="text-brand-gold">Words</span>
         </h2>
 
-        {/* 3D Stacked Carousel Container */}
+        {/* 3D Stacked Carousel Container with dynamic height on expansion */}
         <div
-          className="relative w-full max-w-[850px] h-[340px] sm:h-[280px] flex items-center justify-center mb-10"
+          className="relative w-full max-w-[850px] transition-all duration-300 flex items-center justify-center mb-10"
+          style={{ height: expandedId ? (isMobile ? "480px" : "380px") : (isMobile ? "340px" : "280px") }}
           onMouseEnter={() => setIsHovered(true)}
           onMouseLeave={() => setIsHovered(false)}
         >
@@ -107,13 +125,14 @@ export default function Testimonials() {
               const isLeft = diff === -1;
               const isRight = diff === 1;
               const isVisible = isCenter || isLeft || isRight;
+              const isExpanded = expandedId === item.id;
 
               // Calculate transition styles
               let style: React.CSSProperties = {};
               if (isCenter) {
                 style = {
                   transform: "translateX(0) scale(1)",
-                  zIndex: 30,
+                  zIndex: isExpanded ? 50 : 30,
                   opacity: 1,
                 };
               } else if (isLeft) {
@@ -131,7 +150,6 @@ export default function Testimonials() {
                   pointerEvents: "none",
                 };
               } else {
-                // Keep offscreen cards positioned to the sides so that they transition in a single direction
                 const translateXVal = diff > 0 ? "80%" : "-80%";
                 style = {
                   transform: isMobile ? "translateX(0) scale(0.7)" : `translateX(${translateXVal}) scale(0.75)`,
@@ -144,16 +162,19 @@ export default function Testimonials() {
               return (
                 <div
                   key={item.id}
-                  className={`absolute w-full h-[260px] sm:h-[220px] bg-[#FCF9F5] rounded-3xl p-6 sm:p-8 flex flex-col justify-between transition-all duration-500 ease-out select-none ${
+                  className={`absolute w-full bg-[#FCF9F5] rounded-3xl p-6 sm:p-8 flex flex-col justify-between transition-all duration-500 ease-out select-none ${
                     isCenter ? "border-2 border-brand-gold shadow-[0_15px_40px_rgba(189,146,77,0.15)]" : "border border-[#FAF7F2]/20 shadow-[0_12px_30px_rgba(0,0,0,0.15)]"
                   } ${
                     !isVisible ? "pointer-events-none" : ""
+                  } ${
+                    isExpanded 
+                      ? "h-auto min-h-[260px] sm:min-h-[220px] shadow-[0_20px_50px_rgba(189,146,77,0.3)] pb-6" 
+                      : "h-[260px] sm:h-[220px]"
                   }`}
                   style={style}
                 >
-                  {/* Rating Stars & Quotes mark decoration */}
-                  <div className="flex justify-between items-center w-full mb-3">
-                    {/* 5 gold rating stars */}
+                  {/* Rating Stars */}
+                  <div className="flex justify-between items-center w-full mb-2">
                     <div className="flex gap-0.5 text-brand-gold">
                       {Array.from({ length: 5 }).map((_, i) => (
                         <svg key={i} className="w-3.5 h-3.5 fill-current" viewBox="0 0 20 20">
@@ -161,23 +182,57 @@ export default function Testimonials() {
                         </svg>
                       ))}
                     </div>
-                    {/* Subtle quote icon */}
-                    <span className="text-2xl text-brand-gold/20 font-serif leading-none">&ldquo;</span>
                   </div>
 
-                  {/* Quote text */}
-                  <p className="text-xs sm:text-sm text-gray-600 font-semibold leading-relaxed mb-4 text-center line-clamp-4 italic">
-                    "{item.quote}"
-                  </p>
+                  {/* Quote text wrapper with transition */}
+                  <div 
+                    className="relative overflow-hidden transition-all duration-300 flex-grow mb-2"
+                    style={{ 
+                      maxHeight: isExpanded ? "400px" : (isMobile ? "90px" : "65px") 
+                    }}
+                  >
+                    <p className={`text-xs sm:text-sm text-gray-600 font-semibold leading-relaxed text-left italic ${
+                      !isExpanded ? "line-clamp-3" : ""
+                    }`}>
+                      "{item.quote}"
+                    </p>
+                  </div>
+
+                  {/* Read More button */}
+                  {isCenter && (
+                    <div className="flex justify-start mb-3">
+                      <button
+                        onClick={(e) => {
+                          e.stopPropagation();
+                          setExpandedId(isExpanded ? null : item.id);
+                        }}
+                        className="text-left text-[10px] font-black text-brand-gold uppercase tracking-wider focus:outline-none hover:underline cursor-pointer"
+                      >
+                        {isExpanded ? "Read less" : "Read more"}
+                      </button>
+                    </div>
+                  )}
 
                   {/* Author Meta details */}
-                  <div className="text-center mt-auto">
-                    <span className="block text-xs font-black text-[#231F20] tracking-wide mb-0.5">
-                      {item.author}
-                    </span>
-                    <span className="block text-[10px] font-bold text-gray-400 tracking-wider uppercase">
-                      {item.tag}
-                    </span>
+                  <div className="flex items-center justify-between mt-auto w-full border-t border-gray-200/50 pt-3">
+                    <div className="flex items-center gap-3">
+                      {/* Avatar Placeholder (Gray circle with initials) */}
+                      {item.initials && (
+                        <div className="w-10 h-10 rounded-full bg-gray-300 flex items-center justify-center text-gray-700 text-xs font-black tracking-wider flex-shrink-0 select-none uppercase">
+                          {item.initials}
+                        </div>
+                      )}
+                      <div className="flex flex-col items-start text-left">
+                        <span className="block text-xs font-black text-[#231F20] tracking-wide">
+                          {item.author}
+                        </span>
+                        <span className="block text-[9px] font-bold text-gray-400 tracking-wider uppercase mt-0.5">
+                          {item.tag}
+                        </span>
+                      </div>
+                    </div>
+                    {/* Subtle quote icon */}
+                    <span className="text-3xl text-brand-gold/25 font-serif leading-none select-none">&rdquo;</span>
                   </div>
                 </div>
               );

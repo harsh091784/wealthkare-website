@@ -171,40 +171,32 @@
     "disclaimer": "Testimonials reflect individual client experiences and are not indicative of future results.",
     "items": [
       {
-        "id": 1,
-        "quote": "What I value most is the clarity. Every recommendation comes with a clear reason, and I never feel rushed into a decision.",
-        "author": "Rajesh M.",
-        "tag": "Business Owner, Delhi"
+        "id": "rc-gupta",
+        "quote": "I am using your services for more than 10 years now and am quite happy with your services. My most of life savings are in financial assets under your management. I really need a good guide and a person who is reliable, proactive and handles the investments methodically. Financial investment guide need to think above his interest of commission — which I found with you. I also feel comfortable to discuss difficult issues regarding security of investments with you. I have already given your reference to all my family members and close friends — which itself is the biggest testimony from my side. Please continue to give professional and honest help to the society.",
+        "author": "Mr. R. C. Gupta",
+        "tag": "Client",
+        "initials": "RG"
       },
       {
-        "id": 2,
-        "quote": "The team treats my family's goals as their own. In fifteen years, the relationship has only grown stronger.",
-        "author": "Anita S.",
-        "tag": "Doctor, Gurgaon"
+        "id": "akshay-gupta",
+        "quote": "I am a client of Wealthcare for the last 8 years! My whole family is a client and Mr. Naveen Gupta has been handling our portfolios. I am very pleased with their on time and honest services. The best part is the honesty, which always puts me at peace that my life savings are in safe hands. I have always received honest and beneficial financial advice from Wealthcare and their team.",
+        "author": "Mr. Akshay Gupta",
+        "tag": "Client",
+        "initials": "AG"
       },
       {
-        "id": 3,
-        "quote": "They simplified what felt overwhelming. Today I understand exactly where my money is and why.",
-        "author": "Vikram K.",
-        "tag": "Senior Executive, Noida"
+        "id": "mohit-anand",
+        "quote": "I would like to acknowledge and express my appreciation for their useful advice and impeccable service in handling my investment portfolio. WC Securities have been providing me financial advice and services since past 8 years and I am very much satisfied with them. Their professional dealing along with attention to detail with which they have handled my financial affairs could not be faulted. Particularly reassuring to me is the feeling of trust and credibility along with absolute integrity of their dealings with me.",
+        "author": "Dr. (Prof.) Mohit Anand",
+        "tag": "Client",
+        "initials": "MA"
       },
       {
-        "id": 4,
-        "quote": "Responsive, transparent, and always available when it matters. That peace of mind is worth a great deal.",
-        "author": "Priya N.",
-        "tag": "Entrepreneur, Delhi"
-      },
-      {
-        "id": 5,
-        "quote": "What sets them apart is the planning, not just the products. My goals drive every conversation.",
-        "author": "Sandeep R.",
-        "tag": "NRI Client, Dubai"
-      },
-      {
-        "id": 6,
-        "quote": "Honest advice, even when it isn't what I expected to hear. That candour is why I've stayed.",
-        "author": "Meera T.",
-        "tag": "Retired Professional, Delhi"
+        "id": "kanak-singh",
+        "quote": "I have been a client of Wealthcare since past 10 years and during this period, they have been very open, pragmatic & honest while giving financial advice. They have always planned and implemented their actions according to my personal financial requirements, thus proving that clients are their priority. I am assured that my life savings are in safe hands.",
+        "author": "Mr. Kanak Singh",
+        "tag": "Retired Wing Commander",
+        "initials": "KS"
       }
     ]
   },
