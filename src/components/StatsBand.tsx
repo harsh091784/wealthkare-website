@@ -1,105 +1,6 @@
 "use client";
 
-import { useEffect, useRef, useState } from "react";
-import content from "@/content/homepage.json";
-
 export default function StatsBand() {
-  const { eyebrow, items: rawItems } = content.stats;
-
-  const foundingYear = 2003;
-  const currentYear = new Date().getFullYear();
-  const yearsInIndustry = currentYear - foundingYear;
-
-  // Map raw config items to inject dynamically calculated years
-  const items = rawItems.map(item => {
-    if (item.id === "years") {
-      return { ...item, value: yearsInIndustry };
-    }
-    return item;
-  });
-
-  const sectionRef = useRef<HTMLDivElement>(null);
-  const [hasIntersected, setHasIntersected] = useState(false);
-  const [counts, setCounts] = useState<{ [key: string]: number }>(() => {
-    const isHeadless = typeof navigator !== "undefined" && /HeadlessChrome/i.test(navigator.userAgent);
-    if (isHeadless) {
-      return {
-        aum: 1200,
-        clients: 2500,
-        years: yearsInIndustry,
-        products: 10
-      };
-    }
-    // Start at 90% of final values
-    return {
-      aum: 1080,
-      clients: 2250,
-      years: Math.floor(yearsInIndustry * 0.9),
-      products: 9
-    };
-  });
-
-  useEffect(() => {
-    const observer = new IntersectionObserver(
-      ([entry]) => {
-        if (entry.isIntersecting) {
-          setHasIntersected(true);
-          observer.unobserve(entry.target);
-        }
-      },
-      { threshold: 0.15 }
-    );
-
-    if (sectionRef.current) {
-      observer.observe(sectionRef.current);
-    }
-
-    return () => {
-      observer.disconnect();
-    };
-  }, []);
-
-  useEffect(() => {
-    const isHeadless = typeof navigator !== "undefined" && /HeadlessChrome/i.test(navigator.userAgent);
-    if (isHeadless) return;
-    if (!hasIntersected) return;
-
-    const duration = 1000; // Animation duration (1.0 second max)
-    const frameRate = 1000 / 60; // 60fps
-    const totalFrames = Math.round(duration / frameRate);
-    let frame = 0;
-
-    // Ease-out cubic formula for smooth decelerating animation
-    const easeOutCubic = (t: number) => --t * t * t + 1;
-
-    const timer = setInterval(() => {
-      frame++;
-      const progress = easeOutCubic(frame / totalFrames);
-
-      const newCounts = items.reduce((acc, item) => {
-        const startValue = Math.floor(item.value * 0.9);
-        const diff = item.value - startValue;
-        const currentValue = startValue + Math.min(Math.round(progress * diff), diff);
-        acc[item.id] = currentValue;
-        return acc;
-      }, {} as { [key: string]: number });
-
-      setCounts(newCounts);
-
-      if (frame >= totalFrames) {
-        clearInterval(timer);
-        // Explicitly set exact target values to prevent any rounding discrepancies
-        const finalCounts = items.reduce((acc, item) => {
-          acc[item.id] = item.value;
-          return acc;
-        }, {} as { [key: string]: number });
-        setCounts(finalCounts);
-      }
-    }, frameRate);
-
-    return () => clearInterval(timer);
-  }, [hasIntersected, items]);
-
   // Icon selector returning customized SVG inline structures in #BD924D
   const renderIcon = (type: string) => {
     switch (type) {
@@ -132,9 +33,39 @@ export default function StatsBand() {
     }
   };
 
+  const items = [
+    {
+      id: "aum",
+      valueText: "1,200",
+      suffix: "+",
+      label: "Crore AUM",
+      icon: "aum"
+    },
+    {
+      id: "clients",
+      valueText: "2,500",
+      suffix: "+",
+      label: "Happy Clients",
+      icon: "clients"
+    },
+    {
+      id: "years",
+      valueText: "23",
+      suffix: "+",
+      label: "Years in Industry",
+      icon: "years"
+    },
+    {
+      id: "products",
+      valueText: "10",
+      suffix: "+",
+      label: "Products",
+      icon: "products"
+    }
+  ];
+
   return (
     <section
-      ref={sectionRef}
       className="w-full bg-white border-t border-gray-100 flex-shrink-0 py-6 flex flex-col items-center justify-center"
     >
       <div className="w-full max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col items-center">
@@ -142,13 +73,13 @@ export default function StatsBand() {
           Our Track <span className="text-brand-gold">Record</span>
         </h2>
 
-        {/* 4-column Stat Row (Animated) — perfectly centered */}
+        {/* 4-column Stat Row (Static) — perfectly centered */}
         <div className="grid grid-cols-2 md:grid-cols-4 gap-6 md:gap-10 items-center w-full">
           {items.map((item, idx) => (
             <div key={idx} className="flex flex-col items-center text-center">
               {/* Stat Number */}
               <div className="text-2xl sm:text-3xl font-extrabold text-[#231F20] tracking-tight mb-1 tabular-nums">
-                {counts[item.id].toLocaleString("en-IN")}
+                {item.valueText}
                 <span className="text-brand-gold">{item.suffix}</span>
               </div>
 
