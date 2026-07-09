@@ -205,7 +205,9 @@ export default function VirtualMeetingPage() {
                   SUBMIT REQUEST
                 </button>
                 <a
-                  href="#"
+                  href="https://calendly.com/"
+                  target="_blank"
+                  rel="noopener noreferrer"
                   className="flex-1 bg-[#BD924D] hover:bg-[#a67e3f] text-white text-[10px] sm:text-xs font-black tracking-widest py-4 rounded-full transition-all duration-300 shadow-md hover:shadow-lg uppercase text-center block"
                 >
                   Book a Meeting
