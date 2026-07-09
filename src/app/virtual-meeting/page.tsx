@@ -5,6 +5,7 @@ import Header from "@/components/Header";
 import Link from "next/link";
 import Breadcrumb from "@/components/Breadcrumb";
 import ArcRing from "@/components/ArcRing";
+import Image from "next/image";
 
 export default function VirtualMeetingPage() {
   const [form, setForm] = useState({
@@ -261,25 +262,20 @@ export default function VirtualMeetingPage() {
               </div>
             </div>
 
-            {/* Why Consult With Us */}
-            <div className="border-t border-gray-100 pt-6">
-              <h4 className="text-xs font-black tracking-widest text-[#BD924D] uppercase mb-4">
-                What we discuss
-              </h4>
-              <ul className="flex flex-col gap-4 text-xs font-semibold text-gray-600">
-                <li className="flex items-start gap-3">
-                  <span className="w-1.5 h-1.5 bg-[#BD924D] rounded-full mt-1.5 flex-shrink-0" />
-                  Asset Allocation Alignment relative to current market conditions.
-                </li>
-                <li className="flex items-start gap-3">
-                  <span className="w-1.5 h-1.5 bg-[#BD924D] rounded-full mt-1.5 flex-shrink-0" />
-                  Total Expense Ratio (TER) analysis and commission disclosures.
-                </li>
-                <li className="flex items-start gap-3">
-                  <span className="w-1.5 h-1.5 bg-[#BD924D] rounded-full mt-1.5 flex-shrink-0" />
-                  Risk matching audit (ensuring portfolio suits your real risk appetite).
-                </li>
-              </ul>
+            {/* Speaker Event Photo - Social Proof */}
+            <div className="border-t border-gray-100 pt-6 flex flex-col gap-3">
+              <div className="relative w-full rounded-2xl overflow-hidden border border-gray-200 shadow-sm">
+                <Image
+                  src="/nfp2024.jpg"
+                  alt="Mukesh Gupta, Founder — speaking at NFP2024"
+                  width={600}
+                  height={400}
+                  className="w-full object-cover"
+                />
+              </div>
+              <p className="text-[10px] sm:text-xs font-bold text-gray-500 tracking-wide leading-relaxed text-center">
+                Mukesh Gupta, Founder &mdash; speaking at NFP2024, Network FP Pro Member Event.
+              </p>
             </div>
           </div>
         </div>

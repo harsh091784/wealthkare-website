@@ -19,8 +19,8 @@ export default function Header() {
 
   return (
     <header className="w-full bg-transparent z-40 flex-shrink-0 h-[72px] flex items-center">
-      {/* Container restricted to max-w-6xl to tighten horizontal gaps and create visual balance */}
-      <div className="w-full max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-row justify-between items-center h-full">
+      {/* Container restricted to max-w-7xl to align with general page grid */}
+      <div className="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-row justify-between items-center h-full">
         
         {/* Left: Logo Lockup */}
         <div className="flex flex-row items-center gap-2">
@@ -45,8 +45,8 @@ export default function Header() {
           </div>
         </div>
 
-        {/* Center: Gold Capsule Navigation (Desktop) */}
-        <nav className="hidden lg:flex items-center justify-center">
+        {/* Center-Left: Gold Capsule Navigation (Desktop) - shifted left closer to logo */}
+        <nav className="hidden lg:flex items-center justify-center ml-10 xl:ml-16 mr-auto">
           <div className="bg-brand-gold rounded-full px-5 py-2.5 flex flex-row items-center gap-5 shadow-sm">
             {navItems.map((item, idx) => (
               <a
@@ -64,7 +64,7 @@ export default function Header() {
         <div className="hidden lg:flex items-center gap-3">
           <a
             href="/virtual-meeting"
-            className="border border-brand-gold text-brand-gold hover:bg-brand-gold hover:text-white bg-transparent text-[10px] font-extrabold px-6 py-2.5 rounded-full transition-all tracking-widest shadow-sm"
+            className="h-[38px] flex items-center justify-center border border-brand-gold text-brand-gold hover:bg-brand-gold hover:text-white bg-transparent text-[10px] font-extrabold px-6 rounded-full transition-all tracking-widest shadow-sm whitespace-nowrap"
           >
             Virtual Meeting
           </a>
@@ -72,7 +72,7 @@ export default function Header() {
             href={loginHref}
             target="_blank"
             rel="noopener noreferrer"
-            className="bg-brand-gold hover:bg-[#a67e3f] text-white text-[10px] font-extrabold px-6 py-2.5 rounded-full transition-all tracking-widest shadow-sm"
+            className="h-[38px] flex items-center justify-center bg-brand-gold hover:bg-[#a67e3f] text-white text-[10px] font-extrabold px-6 rounded-full transition-all tracking-widest shadow-sm whitespace-nowrap"
           >
             {loginText}
           </a>
