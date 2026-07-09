@@ -60,8 +60,14 @@ export default function Header() {
           </div>
         </nav>
 
-        {/* Right: Login Button (Desktop) */}
-        <div className="hidden lg:flex">
+        {/* Right: CTA Buttons (Desktop) */}
+        <div className="hidden lg:flex items-center gap-3">
+          <a
+            href="/virtual-meeting"
+            className="border border-brand-gold text-brand-gold hover:bg-brand-gold hover:text-white bg-transparent text-[10px] font-extrabold px-6 py-2.5 rounded-full transition-all tracking-widest shadow-sm"
+          >
+            Virtual Meeting
+          </a>
           <a
             href={loginHref}
             target="_blank"
@@ -105,6 +111,13 @@ export default function Header() {
               </a>
             ))}
           </nav>
+          <a
+            href="/virtual-meeting"
+            onClick={() => setMobileMenuOpen(false)}
+            className="w-full text-center border border-brand-gold text-brand-gold hover:bg-brand-gold hover:text-white bg-transparent text-xs font-bold py-2.5 rounded-full transition-all tracking-widest"
+          >
+            Virtual Meeting
+          </a>
           <a
             href={loginHref}
             target="_blank"
