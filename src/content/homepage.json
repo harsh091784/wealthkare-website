@@ -50,7 +50,7 @@
       },
       {
         "id": "products",
-        "value": 15,
+        "value": 10,
         "suffix": "+",
         "label": "Products",
         "icon": "products"

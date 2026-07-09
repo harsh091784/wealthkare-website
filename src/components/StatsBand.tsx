@@ -27,7 +27,7 @@ export default function StatsBand() {
         aum: 1200,
         clients: 2500,
         years: yearsInIndustry,
-        products: 15
+        products: 10
       };
     }
     // Start at 90% of final values
@@ -35,7 +35,7 @@ export default function StatsBand() {
       aum: 1080,
       clients: 2250,
       years: Math.floor(yearsInIndustry * 0.9),
-      products: 13
+      products: 9
     };
   });
 

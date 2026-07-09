@@ -45,14 +45,14 @@ export default function Header() {
           </div>
         </div>
 
-        {/* Center-Left: Gold Capsule Navigation (Desktop) - shifted left closer to logo */}
-        <nav className="hidden lg:flex items-center justify-center ml-10 xl:ml-16 mr-auto">
-          <div className="bg-brand-gold rounded-full px-5 py-2.5 flex flex-row items-center gap-5 shadow-sm">
+        {/* Center-Left: Gold Capsule Navigation (Desktop) - shifted left closer to logo with responsive spacing */}
+        <nav className="hidden lg:flex items-center justify-center ml-4 xl:ml-16 mr-auto">
+          <div className="bg-brand-gold rounded-full px-3.5 xl:px-5 py-2.5 flex flex-row items-center gap-3 xl:gap-5 shadow-sm">
             {navItems.map((item, idx) => (
               <a
                 key={idx}
                 href={getHref(item.href)}
-                className="text-[10px] font-bold text-white hover:text-gray-100 transition-colors tracking-widest font-sans whitespace-nowrap"
+                className="text-[9px] xl:text-[10px] font-bold text-white hover:text-gray-100 transition-colors tracking-widest font-sans whitespace-nowrap"
               >
                 {item.label}
               </a>
@@ -60,11 +60,11 @@ export default function Header() {
           </div>
         </nav>
 
-        {/* Right: CTA Buttons (Desktop) */}
-        <div className="hidden lg:flex items-center gap-3">
+        {/* Right: CTA Buttons (Desktop) - responsive padding and font-size */}
+        <div className="hidden lg:flex items-center gap-2 xl:gap-3">
           <a
             href="/virtual-meeting"
-            className="h-[38px] flex items-center justify-center border border-brand-gold text-brand-gold hover:bg-brand-gold hover:text-white bg-transparent text-[10px] font-extrabold px-6 rounded-full transition-all tracking-widest shadow-sm whitespace-nowrap"
+            className="h-[38px] flex items-center justify-center border border-brand-gold text-brand-gold hover:bg-brand-gold hover:text-white bg-transparent text-[9px] xl:text-[10px] font-extrabold px-4 xl:px-6 rounded-full transition-all tracking-widest shadow-sm whitespace-nowrap"
           >
             Virtual Meeting
           </a>
@@ -72,7 +72,7 @@ export default function Header() {
             href={loginHref}
             target="_blank"
             rel="noopener noreferrer"
-            className="h-[38px] flex items-center justify-center bg-brand-gold hover:bg-[#a67e3f] text-white text-[10px] font-extrabold px-6 rounded-full transition-all tracking-widest shadow-sm whitespace-nowrap"
+            className="h-[38px] flex items-center justify-center bg-brand-gold hover:bg-[#a67e3f] text-white text-[9px] xl:text-[10px] font-extrabold px-4 xl:px-6 rounded-full transition-all tracking-widest shadow-sm whitespace-nowrap"
           >
             {loginText}
           </a>

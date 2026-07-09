@@ -24,8 +24,9 @@
 }
 
 /* Base custom resets */
-body {
+html, body {
   background-color: var(--background);
   color: var(--foreground);
   overflow-x: hidden;
+  max-width: 100%;
 }
