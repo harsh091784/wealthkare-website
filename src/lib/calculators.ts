@@ -2861,7 +2861,7 @@ export interface CategoryData {
 export const CATEGORIES_REGISTRY: CategoryData[] = [
   {
     name: "Investment",
-    count: 9,
+    count: 10,
     iconName: "investment",
     calculators: [
       { id: "sip", name: "SIP Calculator", isBuilt: true },
@@ -2869,6 +2869,7 @@ export const CATEGORIES_REGISTRY: CategoryData[] = [
       { id: "step-up-sip", name: "Step-up SIP Calculator", isBuilt: true },
       { id: "swp", name: "SWP Calculator", isBuilt: true },
       { id: "stp", name: "STP Calculator", isBuilt: true },
+      { id: "goal-sip", name: "Goal SIP Calculator", isBuilt: true },
       { id: "cagr", name: "CAGR Calculator", isBuilt: true },
       { id: "absolute-return", name: "Absolute Return Calculator", isBuilt: true },
       { id: "xirr-calc", name: "XIRR Calculator", isBuilt: true },
@@ -2878,10 +2879,9 @@ export const CATEGORIES_REGISTRY: CategoryData[] = [
   },
   {
     name: "Goal-Based",
-    count: 9,
+    count: 8,
     iconName: "goal",
     calculators: [
-      { id: "goal-sip", name: "Goal SIP Calculator", isBuilt: true },
       { id: "child-education", name: "Child Education Planner", isBuilt: true },
       { id: "crorepati", name: "Crorepati / Wealth Target", isBuilt: true },
       { id: "emergency-fund", name: "Emergency Fund Calculator", isBuilt: true },
@@ -2961,10 +2961,13 @@ export const CATEGORIES_REGISTRY: CategoryData[] = [
   },
   {
     name: "Utility",
-    count: 4,
+    count: 7,
     iconName: "utility",
     calculators: [
       { id: "inflation-calc", name: "Inflation Calculator", isBuilt: true },
+      { id: "net-worth", name: "Net Worth Calculator", isBuilt: true },
+      { id: "asset-allocation", name: "Asset Allocation Calculator", isBuilt: true },
+      { id: "risk-profile-quiz", name: "Risk Profiling Quiz", isBuilt: true },
       { id: "compound-interest", name: "Compounding Calculator", isBuilt: true },
       { id: "cost-of-delay", name: "Cost of Delay", isBuilt: true },
       { id: "purchasing-power", name: "Purchasing Power Calculator", isBuilt: true },
