@@ -2806,6 +2806,48 @@ export const CALCULATOR_MODULES: CalculatorModule[] = [
       };
     },
   },
+  {
+    id: "nps-tier2",
+    name: "NPS Tier 2",
+    headline: "Model your voluntary savings with NPS Tier 2.",
+    inputs: [
+      { id: "monthlyContrib", label: "Monthly Contribution", min: 500, max: 50000, step: 500, defaultValue: 5000, format: (v) => formatIndianCurrency(v) },
+      { id: "duration", label: "Duration", min: 1, max: 30, step: 1, defaultValue: 10, format: (v) => `${v} yrs` },
+      { id: "expectedReturn", label: "Expected Return", min: 8, max: 12, step: 0.5, defaultValue: 10, format: (v) => `${v}% p.a.` },
+    ],
+    calculate: (vals) => {
+      const P = vals.monthlyContrib ?? 5000;
+      const t = vals.duration ?? 10;
+      const r = vals.expectedReturn ?? 10;
+
+      const i = r / 12 / 100;
+      const n = t * 12;
+
+      const projectedValue = Math.round(P * (((Math.pow(1 + i, n) - 1) / i) * (1 + i)));
+      const invested = P * n;
+      const estReturns = Math.max(0, projectedValue - invested);
+
+      const donutData = [
+        { label: "Invested Amount", value: invested, color: "#231F20" },
+        { label: "Est. Returns", value: estReturns, color: "#BD924D" },
+      ];
+
+      return {
+        projectedValue,
+        invested,
+        returns: estReturns,
+        chartType: "donut",
+        donutData,
+        customResultLabel: "PROJECTED VALUE",
+        extraMetrics: [
+          { label: "Projected Value", value: formatIndianCurrency(projectedValue) },
+          { label: "Total Invested", value: formatIndianCurrency(invested) },
+          { label: "Est. Returns", value: formatIndianCurrency(estReturns) },
+        ],
+        durationText: `${t} Yrs`,
+      };
+    },
+  },
 ];
 
 // All 8 categories with counts and names of calculators
@@ -2858,11 +2900,12 @@ export const CATEGORIES_REGISTRY: CategoryData[] = [
     calculators: [
       { id: "retirement", name: "Retirement Planning", isBuilt: true },
       { id: "nps", name: "NPS Calculator", isBuilt: true },
+      { id: "nps-tier2", name: "NPS Tier 2", isBuilt: true },
       { id: "ppf", name: "PPF Calculator", isBuilt: true },
       { id: "epf", name: "EPF Calculator", isBuilt: true },
       { id: "annuity", name: "Annuity Calculator", isBuilt: true },
       { id: "fire-calc", name: "FIRE Calculator (Early Retire)", isBuilt: true },
-      { id: "scss", name: "Senior Citizen Savings Scheme", isBuilt: true },
+      { id: "gratuity", name: "Gratuity Calculator", isBuilt: true },
       { id: "pension", name: "Pension Calculator", isBuilt: false },
     ],
   },
@@ -2873,10 +2916,10 @@ export const CATEGORIES_REGISTRY: CategoryData[] = [
     calculators: [
       { id: "fd-calc", name: "Fixed Deposit (FD) Calculator", isBuilt: true },
       { id: "rd-calc", name: "Recurring Deposit (RD) Calculator", isBuilt: true },
+      { id: "scss", name: "Senior Citizen Savings Scheme", isBuilt: true },
       { id: "ssy", name: "Sukanya Samriddhi Yojana (SSY)", isBuilt: true },
       { id: "post-office", name: "Post Office Schemes", isBuilt: true },
       { id: "bond-yield", name: "Bond Yield Calculator", isBuilt: true },
-      { id: "gratuity", name: "Gratuity Calculator", isBuilt: true },
     ],
   },
   {
