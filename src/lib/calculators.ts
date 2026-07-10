@@ -1143,9 +1143,9 @@ export const CALCULATOR_MODULES: CalculatorModule[] = [
         id: "cashflows",
         label: "Cash Flows Table",
         defaultValue: [
-          { date: "2020-01-01", amount: -10000 },
-          { date: "2021-01-01", amount: -10000 },
-          { date: "2022-06-05", amount: 25000 },
+          { date: "2023-01-01", amount: -10000 },
+          { date: "2024-01-01", amount: -10000 },
+          { date: "2025-06-05", amount: 25000 },
         ],
         type: "cashflows",
         format: () => "Dynamic Cash Flows Table",
@@ -1153,9 +1153,9 @@ export const CALCULATOR_MODULES: CalculatorModule[] = [
     ],
     calculate: (vals) => {
       const cashflows = vals.cashflows ?? [
-        { date: "2020-01-01", amount: -10000 },
-        { date: "2021-01-01", amount: -10000 },
-        { date: "2022-06-05", amount: 25000 },
+        { date: "2023-01-01", amount: -10000 },
+        { date: "2024-01-01", amount: -10000 },
+        { date: "2025-06-05", amount: 25000 },
       ];
 
       const xirr = calculateXIRR(cashflows);
@@ -2819,7 +2819,7 @@ export interface CategoryData {
 export const CATEGORIES_REGISTRY: CategoryData[] = [
   {
     name: "Investment",
-    count: 10,
+    count: 9,
     iconName: "investment",
     calculators: [
       { id: "sip", name: "SIP Calculator", isBuilt: true },
@@ -2836,7 +2836,7 @@ export const CATEGORIES_REGISTRY: CategoryData[] = [
   },
   {
     name: "Goal-Based",
-    count: 10,
+    count: 9,
     iconName: "goal",
     calculators: [
       { id: "goal-sip", name: "Goal SIP Calculator", isBuilt: true },
