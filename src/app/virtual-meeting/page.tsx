@@ -197,7 +197,7 @@ export default function VirtualMeetingPage() {
                 />
               </div>
 
-              {/* Action Buttons: Submit & Book a Meeting side by side */}
+              {/* Action Buttons: Submit & Book a Virtual Meeting side by side */}
               <div className="flex flex-row items-center gap-4 mt-2">
                 <button
                   type="submit"
@@ -211,7 +211,7 @@ export default function VirtualMeetingPage() {
                   rel="noopener noreferrer"
                   className="flex-1 bg-[#BD924D] hover:bg-[#a67e3f] text-white text-[10px] sm:text-xs font-black tracking-widest py-4 rounded-full transition-all duration-300 shadow-md hover:shadow-lg uppercase text-center block"
                 >
-                  Book a Meeting
+                  Book a Virtual Meeting
                 </a>
               </div>
 

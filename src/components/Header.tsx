@@ -23,26 +23,17 @@ export default function Header() {
       <div className="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-row justify-between items-center h-full">
         
         {/* Left: Logo Lockup */}
-        <div className="flex flex-row items-center gap-2">
-          {/* Stylized triangular golden W logo mark */}
-          <div className="w-8 h-8 sm:w-9 sm:h-9 flex-shrink-0 text-brand-gold">
-            <svg viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg" className="w-full h-full">
-              <path d="M50 15L85 80H70L50 42L30 80H15L50 15Z" fill="currentColor" />
-              <path d="M50 55L65 80H35L50 55Z" fill="currentColor" opacity="0.85" />
-            </svg>
-          </div>
-          <div className="flex flex-col select-none">
-            <div className="flex flex-row items-baseline leading-none">
-              <span className={`text-base sm:text-lg font-extrabold tracking-tight ${pathname === "/events" ? "text-white" : "text-[#231F20]"}`}>Wealth</span>
-              <span className="text-base sm:text-lg font-bold tracking-tight text-brand-gold">kare</span>
-            </div>
-            <span className={`text-[7.5px] font-semibold tracking-wider mt-0.5 leading-none ${pathname === "/events" ? "text-gray-300" : "text-gray-500"}`}>
-              Relationships Beyond Investments
-            </span>
-            <span className={`text-[6.5px] font-bold tracking-widest mt-0.5 leading-none uppercase ${pathname === "/events" ? "text-gray-400" : "text-gray-400"}`}>
-              AMFI Registered Mutual Fund & SIF Distributor
-            </span>
-          </div>
+        <div className="flex flex-col items-start select-none">
+          <img
+            src="/images/logo.png"
+            alt="Wealthkare"
+            className="h-8 sm:h-9 w-auto object-contain"
+            width={135}
+            height={36}
+          />
+          <span className={`text-[6.5px] font-bold tracking-widest leading-none uppercase mt-1 ${pathname === "/events" ? "text-gray-400" : "text-gray-400"}`}>
+            AMFI Registered Mutual Fund & SIF Distributor
+          </span>
         </div>
 
         {/* Center-Left: Gold Capsule Navigation (Desktop) - shifted left closer to logo with responsive spacing */}

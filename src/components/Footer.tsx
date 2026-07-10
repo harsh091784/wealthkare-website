@@ -15,22 +15,14 @@ export default function Footer() {
             {/* Column 1 (lg:col-span-4) - Logo, CNBC Award & Registered Office */}
             <div className="lg:col-span-5 flex flex-col gap-5">
               {/* Logo Lockup */}
-              <div className="flex flex-row items-center gap-2.5">
-                <div className="w-8 h-8 sm:w-9 sm:h-9 flex-shrink-0 text-[#BD924D]">
-                  <svg viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg" className="w-full h-full">
-                    <path d="M50 15L85 80H70L50 42L30 80H15L50 15Z" fill="currentColor" />
-                    <path d="M50 55L65 80H35L50 55Z" fill="currentColor" opacity="0.85" />
-                  </svg>
-                </div>
-                <div className="flex flex-col">
-                  <div className="flex flex-row items-baseline leading-none">
-                    <span className="text-base sm:text-lg font-extrabold tracking-tight text-[#231F20]">Wealth</span>
-                    <span className="text-base sm:text-lg font-bold tracking-tight text-[#BD924D]">kare</span>
-                  </div>
-                  <span className="text-[7.5px] font-semibold text-gray-500 tracking-wider mt-0.5 leading-none">
-                    Relationships Beyond Investments
-                  </span>
-                </div>
+              <div className="flex flex-row items-center select-none">
+                <img
+                  src="/images/logo.png"
+                  alt="Wealthkare"
+                  className="h-8 sm:h-9 w-auto object-contain"
+                  width={135}
+                  height={36}
+                />
               </div>
 
               {/* CNBC Nomination Badge */}

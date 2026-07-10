@@ -9,10 +9,10 @@ import {
 } from "@/lib/calculators";
 
 export default function Calculator() {
-  const [activeTab, setActiveTab] = useState("retirement");
+  const [activeTab, setActiveTab] = useState("sip");
 
   const HOMEPAGE_CALCULATORS = useMemo(() => {
-    const list = ["retirement", "sip", "lumpsum", "step-up-sip", "goal-sip"];
+    const list = ["sip", "retirement", "lumpsum", "step-up-sip", "goal-sip"];
     return list.map(id => CALCULATOR_MODULES.find(m => m.id === id)).filter(Boolean) as typeof CALCULATOR_MODULES;
   }, []);
 
