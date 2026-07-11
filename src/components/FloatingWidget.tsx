@@ -1,11 +1,11 @@
 "use client";
 
+import Link from "next/link";
+
 export default function FloatingWidget() {
   return (
-    <a
-      href="https://calendly.com/wc3511/30min?month=2026-07"
-      target="_blank"
-      rel="noopener noreferrer"
+    <Link
+      href="/virtual-meeting"
       className="fixed bottom-6 right-6 z-[9999] flex items-center gap-2 bg-[#BD924D] hover:bg-[#a67e3f] text-white text-[10px] md:text-xs font-black uppercase tracking-widest px-4.5 py-3 rounded-full shadow-[0_8px_30px_rgba(189,146,77,0.45)] hover:shadow-[0_12px_40px_rgba(189,146,77,0.55)] transition-all duration-300 hover:scale-105 active:scale-95 cursor-pointer select-none"
       aria-label="Book Virtual Meeting"
     >
@@ -25,6 +25,6 @@ export default function FloatingWidget() {
         />
       </svg>
       <span>Virtual Meeting</span>
-    </a>
+    </Link>
   );
 }
