@@ -485,44 +485,6 @@ export default function OurStoryPage() {
                 </div>
               </div>
 
-              {/* Card 3 (Placeholder) */}
-              <div className="bg-[#2A2625] rounded-3xl overflow-hidden border border-gray-800 shadow-lg relative group flex flex-col h-full min-h-[220px]">
-                <div className="relative w-full h-36 overflow-hidden bg-gray-900 flex-shrink-0">
-                  <img
-                    src="/hero-professionals-placeholder.png"
-                    alt="Team Member"
-                    className="w-full h-full object-cover object-top opacity-75 transition-transform duration-500 group-hover:scale-103"
-                  />
-                </div>
-                <div className="p-4 flex-grow flex flex-col justify-center">
-                  <h4 className="text-sm sm:text-base font-black text-white mb-0.5">
-                    Team Member
-                  </h4>
-                  <p className="text-gray-400 text-[10px] font-black uppercase tracking-wider">
-                    Role Placeholder
-                  </p>
-                </div>
-              </div>
-
-              {/* Card 4 (Placeholder) */}
-              <div className="bg-[#2A2625] rounded-3xl overflow-hidden border border-gray-800 shadow-lg relative group flex flex-col h-full min-h-[220px]">
-                <div className="relative w-full h-36 overflow-hidden bg-gray-900 flex-shrink-0">
-                  <img
-                    src="/hero-professionals-placeholder.png"
-                    alt="Team Member"
-                    className="w-full h-full object-cover object-top opacity-75 transition-transform duration-500 group-hover:scale-103"
-                  />
-                </div>
-                <div className="p-4 flex-grow flex flex-col justify-center">
-                  <h4 className="text-sm sm:text-base font-black text-white mb-0.5">
-                    Team Member
-                  </h4>
-                  <p className="text-gray-400 text-[10px] font-black uppercase tracking-wider">
-                    Role Placeholder
-                  </p>
-                </div>
-              </div>
-
               {/* Card 5 (JOIN US Recruitment Card) */}
               <div className="bg-[#2A2625] rounded-3xl p-6 border border-gray-800 shadow-lg flex flex-col justify-center items-center text-center relative overflow-hidden min-h-[220px]">
                 <div className="absolute -right-10 -bottom-10 w-40 h-40 rounded-full bg-[#BD924D]/10 filter blur-xl" />
@@ -532,12 +494,12 @@ export default function OurStoryPage() {
                     yourself to <br />
                     be here?
                   </h4>
-                  <Link
-                    href="/#get-in-touch"
+                  <a
+                    href="mailto:mukesh@wealthcareindia.com?subject=Interest in Joining WC Securities&body=Hi Mukesh, I'm interested in learning more about opportunities to join the WC Securities team."
                     className="bg-white hover:bg-gray-150 text-gray-900 px-6 py-2.5 rounded-full text-[10px] font-black tracking-widest uppercase transition-all shadow-md transform hover:scale-[1.03] duration-200"
                   >
                     Join Us
-                  </Link>
+                  </a>
                 </div>
               </div>
               
