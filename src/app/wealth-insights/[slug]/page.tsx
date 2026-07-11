@@ -13,6 +13,64 @@ export async function generateStaticParams() {
   }));
 }
 
+function parseMarkdown(md: string): string {
+  let html = md.trim();
+
+  // Handle headers
+  html = html.replace(/^### (.*$)/gim, '<h4 class="text-xs font-black tracking-widest text-[#BD924D] uppercase mt-6 mb-3">$1</h4>');
+  html = html.replace(/^## (.*$)/gim, '<h3 class="text-sm font-black text-gray-800 tracking-widest mt-8 mb-4 border-b border-gray-100 pb-2 uppercase">$1</h3>');
+  html = html.replace(/^# (.*$)/gim, '<h2 class="text-base font-black text-gray-800 tracking-widest mt-10 mb-4 border-b border-gray-250 pb-2 uppercase">$1</h2>');
+
+  // Handle bold and italic
+  html = html.replace(/\*\*(.*?)\*\*/g, '<strong class="font-extrabold text-[#231F20]">$1</strong>');
+  html = html.replace(/\*(.*?)\*/g, '<em class="italic text-gray-700">$1</em>');
+
+  // Line by line parsing for paragraphs and lists
+  const lines = html.split('\n');
+  const resultLines: string[] = [];
+  let inList = false;
+
+  const closeList = () => {
+    if (inList) {
+      resultLines.push('</ul>');
+      inList = false;
+    }
+  };
+
+  for (let i = 0; i < lines.length; i++) {
+    let line = lines[i].trim();
+    if (!line) {
+      closeList();
+      continue;
+    }
+
+    if (line.startsWith('<h') || line.startsWith('<div')) {
+      closeList();
+      resultLines.push(line);
+      continue;
+    }
+
+    // Check for bullet list item
+    const bulletMatch = line.match(/^[\-\*]\s+(.*)$/);
+    if (bulletMatch) {
+      if (!inList) {
+        closeList();
+        resultLines.push('<ul class="my-4 space-y-2">');
+        inList = true;
+      }
+      resultLines.push(`<li class="ml-5 list-disc font-semibold text-gray-600">${bulletMatch[1]}</li>`);
+      continue;
+    }
+
+    // Paragraph
+    closeList();
+    resultLines.push(`<p class="mb-4 font-semibold text-gray-600">${line}</p>`);
+  }
+  closeList();
+
+  return resultLines.join('\n');
+}
+
 export default async function BlogPostPage({
   params,
 }: {
@@ -76,17 +134,13 @@ export default async function BlogPostPage({
 
           {/* Content */}
           <div className="prose max-w-none text-[#231F20]/90 text-sm sm:text-base leading-relaxed mb-12">
-            <p className="font-semibold text-gray-600 mb-6 text-base sm:text-lg leading-relaxed">
+            <p className="font-semibold text-gray-600 mb-6 text-base sm:text-lg leading-relaxed border-b border-gray-100 pb-6">
               {post.excerpt}
             </p>
-            <div className="border-t border-gray-100 pt-6">
-              <p className="mb-4">
-                We believe that structured planning and objective frameworks lead to the best financial outcomes. This article represents our commitment to providing simple, educational, and compliance-safe insight.
-              </p>
-              <p className="mb-4">
-                When structuring portfolios or planning taxes, it is always recommended to align options with your personalized income timeline, cash flows, and overall investment duration goals.
-              </p>
-            </div>
+            <div 
+              className="space-y-4 pt-4"
+              dangerouslySetInnerHTML={{ __html: parseMarkdown(post.content) }}
+            />
           </div>
         </article>
       </main>
