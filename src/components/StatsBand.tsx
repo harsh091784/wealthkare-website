@@ -1,6 +1,73 @@
 "use client";
 
+import { useEffect, useState, useRef } from "react";
+
 export default function StatsBand() {
+  const [hasStarted, setHasStarted] = useState(false);
+  const [aumVal, setAumVal] = useState(0);
+  const [clientsVal, setClientsVal] = useState(0);
+  const [yearsVal, setYearsVal] = useState(0);
+  const [productsVal, setProductsVal] = useState(0);
+  const sectionRef = useRef<HTMLDivElement>(null);
+
+  // Dynamic years calculation
+  const targetYears = new Date().getFullYear() - 2003;
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          setHasStarted(true);
+          observer.disconnect(); // Trigger once per page load
+        }
+      },
+      { threshold: 0.1 }
+    );
+
+    if (sectionRef.current) {
+      observer.observe(sectionRef.current);
+    }
+
+    return () => observer.disconnect();
+  }, []);
+
+  useEffect(() => {
+    if (!hasStarted) return;
+
+    const duration = 2000; // 2 seconds
+    const startTime = performance.now();
+
+    const animate = (currentTime: number) => {
+      const elapsed = currentTime - startTime;
+      const progress = Math.min(elapsed / duration, 1);
+      
+      // Cubic ease-out curve
+      const easeOut = 1 - Math.pow(1 - progress, 3);
+
+      setAumVal(Math.floor(easeOut * 1200));
+      setClientsVal(Math.floor(easeOut * 2500));
+      setYearsVal(Math.floor(easeOut * targetYears));
+      setProductsVal(Math.floor(easeOut * 10));
+
+      if (progress < 1) {
+        requestAnimationFrame(animate);
+      } else {
+        // Ensure final values are exact
+        setAumVal(1200);
+        setClientsVal(2500);
+        setYearsVal(targetYears);
+        setProductsVal(10);
+      }
+    };
+
+    requestAnimationFrame(animate);
+  }, [hasStarted, targetYears]);
+
+  // Helper to format numbers with Indian comma format
+  const formatNumber = (num: number) => {
+    return num.toLocaleString("en-IN");
+  };
+
   // Icon selector returning customized SVG inline structures in #BD924D
   const renderIcon = (type: string) => {
     switch (type) {
@@ -36,28 +103,28 @@ export default function StatsBand() {
   const items = [
     {
       id: "aum",
-      valueText: "1,200",
+      value: aumVal,
       suffix: "+",
       label: "Crore AUM",
       icon: "aum"
     },
     {
       id: "clients",
-      valueText: "2,500",
+      value: clientsVal,
       suffix: "+",
       label: "Happy Clients",
       icon: "clients"
     },
     {
       id: "years",
-      valueText: "23",
+      value: yearsVal,
       suffix: "+",
       label: "Years in Industry",
       icon: "years"
     },
     {
       id: "products",
-      valueText: "10",
+      value: productsVal,
       suffix: "+",
       label: "Products",
       icon: "products"
@@ -66,6 +133,7 @@ export default function StatsBand() {
 
   return (
     <section
+      ref={sectionRef}
       className="w-full bg-white border-t border-gray-100 flex-shrink-0 py-6 flex flex-col items-center justify-center"
     >
       <div className="w-full max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col items-center">
@@ -73,13 +141,13 @@ export default function StatsBand() {
           Our Track <span className="text-brand-gold">Record</span>
         </h2>
 
-        {/* 4-column Stat Row (Static) — perfectly centered */}
+        {/* 4-column Stat Row (Dynamic) — perfectly centered */}
         <div className="grid grid-cols-2 md:grid-cols-4 gap-6 md:gap-10 items-center w-full">
           {items.map((item, idx) => (
             <div key={idx} className="flex flex-col items-center text-center">
               {/* Stat Number */}
               <div className="text-2xl sm:text-3xl font-extrabold text-[#231F20] tracking-tight mb-1 tabular-nums">
-                {item.valueText}
+                {formatNumber(item.value)}
                 <span className="text-brand-gold">{item.suffix}</span>
               </div>
 

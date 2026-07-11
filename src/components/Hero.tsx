@@ -33,7 +33,9 @@ export default function Hero() {
             </p>
             <div className="flex flex-row flex-wrap items-center gap-4">
               <a
-                href="/virtual-meeting"
+                href="https://calendly.com/wc3511/30min?month=2026-07"
+                target="_blank"
+                rel="noopener noreferrer"
                 className="flex items-center justify-center h-11 bg-brand-gold hover:bg-[#a67e3f] text-white text-[10px] font-extrabold px-8 rounded-full transition-all tracking-widest shadow-md hover:shadow-lg uppercase"
               >
                 Book a Virtual Meeting
@@ -64,7 +66,7 @@ export default function Hero() {
             {/* Professionals Image standing at the bottom, now natively transparent */}
             <div className="relative z-10 w-full max-w-[340px] sm:max-w-[400px] lg:max-w-none lg:w-[110%] lg:left-[-5%] h-[90%] lg:h-[95%] max-h-[480px] lg:max-h-none flex items-end justify-center">
               <Image
-                src="/hero-professionals-placeholder.png"
+                src="/images/indian_professionals.png"
                 alt="WealthKare Professionals"
                 width={500}
                 height={500}

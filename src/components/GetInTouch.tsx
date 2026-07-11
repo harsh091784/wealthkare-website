@@ -198,7 +198,7 @@ export default function GetInTouch() {
                       SEND MESSAGE
                     </button>
                     <a
-                      href="https://calendly.com/"
+                      href="https://calendly.com/wc3511/30min?month=2026-07"
                       target="_blank"
                       rel="noopener noreferrer"
                       className="flex-1 border border-[#BD924D] text-[#BD924D] hover:bg-[#BD924D] hover:text-white bg-transparent text-[10px] sm:text-xs font-black tracking-widest py-4 rounded-full transition-all duration-300 shadow-md hover:shadow-lg uppercase text-center block"

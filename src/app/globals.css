@@ -23,6 +23,11 @@
   border-color: #BD924D !important;
 }
 
+/* Ensure hover text white override works when text-brand-gold uses !important */
+.hover\:text-white:hover {
+  color: #ffffff !important;
+}
+
 /* Base custom resets */
 html, body {
   background-color: var(--background);

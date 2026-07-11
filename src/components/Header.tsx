@@ -54,7 +54,9 @@ export default function Header() {
         {/* Right: CTA Buttons (Desktop) - responsive padding and font-size */}
         <div className="hidden lg:flex items-center gap-2 xl:gap-3">
           <a
-            href="/virtual-meeting"
+            href="https://calendly.com/wc3511/30min?month=2026-07"
+            target="_blank"
+            rel="noopener noreferrer"
             className="h-[38px] flex items-center justify-center border border-brand-gold text-brand-gold hover:bg-brand-gold hover:text-white bg-transparent text-[9px] xl:text-[10px] font-extrabold px-4 xl:px-6 rounded-full transition-all tracking-widest shadow-sm whitespace-nowrap"
           >
             Virtual Meeting
@@ -103,7 +105,9 @@ export default function Header() {
             ))}
           </nav>
           <a
-            href="/virtual-meeting"
+            href="https://calendly.com/wc3511/30min?month=2026-07"
+            target="_blank"
+            rel="noopener noreferrer"
             onClick={() => setMobileMenuOpen(false)}
             className="w-full text-center border border-brand-gold text-brand-gold hover:bg-brand-gold hover:text-white bg-transparent text-xs font-bold py-2.5 rounded-full transition-all tracking-widest"
           >
