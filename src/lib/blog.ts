@@ -41,7 +41,7 @@ export function getBlogPosts(): BlogPost[] {
       if (splitIndex !== -1) {
         const key = line.substring(0, splitIndex).trim();
         // Remove surrounding quotes and handle edge cases
-        const value = line.substring(splitIndex + 1).trim().replace(/^['"]|['"]$/g, "");
+        const value = line.substring(splitIndex + 1).trim().replace(/^['"]|['"]$/g, "").replace(/\\"/g, '"');
         metadata[key] = value;
       }
     });
