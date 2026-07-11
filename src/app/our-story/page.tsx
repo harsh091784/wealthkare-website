@@ -416,16 +416,29 @@ export default function OurStoryPage() {
               <div className="bg-[#2A2625] rounded-3xl overflow-hidden border border-gray-800 shadow-lg relative group h-full flex flex-col min-h-[380px] lg:min-h-full">
                 <div className="relative w-full h-full overflow-hidden flex-grow min-h-[340px] lg:min-h-[440px]">
                   <img
-                    src="/images/mukesh_founder_square.png"
+                    src="/images/mukesh_founder.jpg"
                     alt="Mr. Mukesh Gupta"
                     className="absolute inset-0 w-full h-full object-cover object-top transition-transform duration-700 group-hover:scale-[1.02] filter contrast-[1.06] brightness-[0.97]"
                   />
                   
                   {/* Overlay details */}
                   <div className="absolute inset-0 bg-gradient-to-t from-black via-black/45 to-transparent flex flex-col justify-end p-6">
-                    <h3 className="text-lg sm:text-xl lg:text-2xl font-black text-white leading-none mb-1">
-                      Mr. Mukesh Gupta
-                    </h3>
+                    <div className="flex items-center gap-2.5 mb-1.5">
+                      <h3 className="text-lg sm:text-xl lg:text-2xl font-black text-white leading-none">
+                        Mr. Mukesh Gupta
+                      </h3>
+                      <a 
+                        href="https://www.linkedin.com/in/mukeshgupta1/" 
+                        target="_blank" 
+                        rel="noopener noreferrer"
+                        className="inline-flex items-center text-[#BD924D] hover:text-white transition-all duration-300 hover:scale-110"
+                        aria-label="Mukesh Gupta LinkedIn Profile"
+                      >
+                        <svg className="w-5 h-5 fill-current" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                          <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.779-1.75-1.75s.784-1.75 1.75-1.75 1.75.779 1.75 1.75-.784 1.75-1.75 1.75zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/>
+                        </svg>
+                      </a>
+                    </div>
                     <p className="text-[#BD924D] text-[10px] sm:text-xs font-black uppercase tracking-wider mb-2">
                       Founder
                     </p>
