@@ -454,34 +454,36 @@ export default function OurStoryPage() {
             <div className="lg:col-span-7 grid grid-cols-1 sm:grid-cols-2 gap-6 items-stretch">
               
               {/* Card 2 (Prakhar Gupta) */}
-              <div className="bg-[#2A2625] rounded-3xl overflow-hidden border border-gray-800 shadow-lg relative group flex flex-col h-full min-h-[220px]">
-                <div className="relative w-full h-36 overflow-hidden bg-gray-900 flex-shrink-0">
+              <div className="bg-[#2A2625] rounded-3xl overflow-hidden border border-gray-800 shadow-lg relative group h-full flex flex-col min-h-[220px]">
+                <div className="relative w-full h-full overflow-hidden flex-grow min-h-[220px]">
                   <img
                     src="/images/prakhar_director.jpg"
                     alt="Prakhar Gupta"
-                    className="w-full h-full object-cover object-top transition-transform duration-500 group-hover:scale-103"
+                    className="absolute inset-0 w-full h-full object-cover object-top transition-transform duration-700 group-hover:scale-[1.02] filter contrast-[1.02] brightness-[0.98]"
                   />
-                </div>
-                <div className="p-4 flex-grow flex flex-col justify-center">
-                  <div className="flex items-center gap-2 mb-0.5">
-                    <h4 className="text-sm sm:text-base font-black text-white leading-none">
-                      Prakhar Gupta
-                    </h4>
-                    <a 
-                      href="https://www.linkedin.com/in/prakhar-gupta-951318286/" 
-                      target="_blank" 
-                      rel="noopener noreferrer"
-                      className="inline-flex items-center text-[#BD924D] hover:text-white transition-all duration-300 hover:scale-110"
-                      aria-label="Prakhar Gupta LinkedIn Profile"
-                    >
-                      <svg className="w-5 h-5 fill-current" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.779-1.75-1.75s.784-1.75 1.75-1.75 1.75.779 1.75 1.75-.784 1.75-1.75 1.75zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/>
-                      </svg>
-                    </a>
+                  
+                  {/* Overlay details */}
+                  <div className="absolute inset-0 bg-gradient-to-t from-black via-black/45 to-transparent flex flex-col justify-end p-5">
+                    <div className="flex items-center gap-2 mb-1">
+                      <h4 className="text-base sm:text-lg font-black text-white leading-none">
+                        Prakhar Gupta
+                      </h4>
+                      <a 
+                        href="https://www.linkedin.com/in/prakhar-gupta-951318286/" 
+                        target="_blank" 
+                        rel="noopener noreferrer"
+                        className="inline-flex items-center text-[#BD924D] hover:text-white transition-all duration-300 hover:scale-110"
+                        aria-label="Prakhar Gupta LinkedIn Profile"
+                      >
+                        <svg className="w-5 h-5 fill-current" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                          <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.779-1.75-1.75s.784-1.75 1.75-1.75 1.75.779 1.75 1.75-.784 1.75-1.75 1.75zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/>
+                        </svg>
+                      </a>
+                    </div>
+                    <p className="text-[#BD924D] text-[10px] sm:text-xs font-black uppercase tracking-wider">
+                      Director, CA
+                    </p>
                   </div>
-                  <p className="text-gray-400 text-[10px] font-black uppercase tracking-wider">
-                    Director, CA
-                  </p>
                 </div>
               </div>
 
