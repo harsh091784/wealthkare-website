@@ -1,14 +1,15 @@
 [
   {
-    "id": "summit-27",
-    "name": "Summit 27",
-    "date": "May, 2026",
-    "thumbnail": "/images/thinker_statue.png",
-    "detailImage1": "/images/events/event_featured.jpg",
+    "id": "money-alpha-summit",
+    "name": "The Money Alpha 360° Summit",
+    "date": "December 17–19, 2026",
+    "venue": "India Expo Centre & Mart, Knowledge Park II, Greater Noida, Delhi-NCR, India",
+    "thumbnail": "/images/events/money_alpha_grid.jpg",
+    "detailImage1": "/images/events/money_alpha_detail.jpg",
     "detailImage2": "/images/events/event_mosaic_3.png",
-    "heading1": "Annual Event",
-    "heading2": "2K26 Summit",
-    "description": "At our annual wealth summit, we brought together over 150 HNI families under one roof for what turned out to be one of the most energising days our team has experienced. We had structured the day around three conversations we felt our clients needed most — navigating market volatility, succession planning for family-owned businesses, and the often-avoided topic of estate planning. What we did not anticipate was how openly and honestly our clients would engage once they realised the person sitting next to them was wrestling with the exact same questions."
+    "heading1": "Fintech Summit",
+    "heading2": "Money Alpha",
+    "description": "The Money Alpha 360° Summit is a major fintech and finance event held in Greater Noida uniting investments, wealth management, and emerging tech. Following an initial launch summit in April, the expansive main convergence is scheduled for later in the year."
   },
   {
     "id": "wc-event",
