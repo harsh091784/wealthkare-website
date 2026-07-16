@@ -39,6 +39,14 @@
     ]
   },
   {
+    "id": "cnbc-award",
+    "name": "CNBC Financial Advisor Award",
+    "type": "full",
+    "thumbnail": "/images/events/cnbc_award.png",
+    "detailImage1": "/images/events/cnbc_award.png",
+    "description": "Nominated for the CNBC Financial Advisor Award, recognizing excellence in financial advisory services."
+  },
+  {
     "id": "wc-event",
     "name": "WC Event",
     "type": "full",

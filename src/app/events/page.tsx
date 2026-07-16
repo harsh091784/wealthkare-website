@@ -287,29 +287,31 @@ export default function EventsPage() {
                     {selectedEvent.description}
                   </p>
 
-                  {/* Date & Venue below description */}
-                  <div className="w-full max-w-3xl flex flex-col sm:flex-row sm:justify-between items-center sm:items-start gap-4 mt-6 text-center sm:text-left border-t border-white/10 pt-6">
-                    {selectedEvent.venue && (
-                      <div className="flex flex-col gap-1 items-center sm:items-start">
-                        <span className="text-[10px] font-black tracking-widest text-[#BD924D] uppercase">
-                          Venue
-                        </span>
-                        <span className="text-xs sm:text-sm text-gray-300 font-semibold max-w-md">
-                          {selectedEvent.venue}
-                        </span>
-                      </div>
-                    )}
-                    {selectedEvent.date && (
-                      <div className="flex flex-col gap-1 items-center sm:items-end sm:ml-auto">
-                        <span className="text-[10px] font-black tracking-widest text-[#BD924D] uppercase">
-                          Date
-                        </span>
-                        <span className="text-xs sm:text-sm text-gray-300 font-semibold">
-                          {selectedEvent.date}
-                        </span>
-                      </div>
-                    )}
-                  </div>
+                  {/* Date & Venue below description (only if at least one exists) */}
+                  {(selectedEvent.venue || selectedEvent.date) && (
+                    <div className="w-full max-w-3xl flex flex-col sm:flex-row sm:justify-between items-center sm:items-start gap-4 mt-6 text-center sm:text-left border-t border-white/10 pt-6">
+                      {selectedEvent.venue && (
+                        <div className="flex flex-col gap-1 items-center sm:items-start">
+                          <span className="text-[10px] font-black tracking-widest text-[#BD924D] uppercase">
+                            Venue
+                          </span>
+                          <span className="text-xs sm:text-sm text-gray-300 font-semibold max-w-md">
+                            {selectedEvent.venue}
+                          </span>
+                        </div>
+                      )}
+                      {selectedEvent.date && (
+                        <div className="flex flex-col gap-1 items-center sm:items-end sm:ml-auto">
+                          <span className="text-[10px] font-black tracking-widest text-[#BD924D] uppercase">
+                            Date
+                          </span>
+                          <span className="text-xs sm:text-sm text-gray-300 font-semibold">
+                            {selectedEvent.date}
+                          </span>
+                        </div>
+                      )}
+                    </div>
+                  )}
                 </>
               )}
 
