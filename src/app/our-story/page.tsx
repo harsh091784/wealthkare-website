@@ -294,7 +294,7 @@ export default function OurStoryPage() {
                   </svg>
                 </div>
                 <div>
-                  <h4 className="text-xs font-black uppercase tracking-wider text-white mb-1.5 opacity-90">Expert Advisory</h4>
+                  <h4 className="text-xs font-black uppercase tracking-wider text-white mb-1.5 opacity-90">Expert Guidance</h4>
                   <p className="text-[12px] sm:text-xs font-semibold text-white/95 leading-relaxed">
                     A team of highly qualified professionals guiding you across a wide range of products — mutual funds, equity, fixed income, insurance, PMS, and AIF.
                   </p>

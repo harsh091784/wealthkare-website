@@ -320,7 +320,7 @@ export default function GetInTouch() {
                   {/* Outline filter for solid silhouette */}
                   <filter id="outer-border">
                     <feMorphology operator="dilate" radius="2.2" in="SourceAlpha" result="dilated" />
-                    <feFlood flood-color="#BD924D" result="color" />
+                    <feFlood floodColor="#BD924D" result="color" />
                     <feComposite in="color" in2="dilated" operator="in" result="outline" />
                     <feMerge>
                       <feMergeNode in="outline" />

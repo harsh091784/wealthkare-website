@@ -16,4 +16,4 @@ FD returns are predictable and guaranteed — unlike market-linked instruments. 
 Enter your principal, tenure, interest rate, and compounding frequency. The result shows your maturity amount and total interest earned. Compare different compounding frequencies to see how quarterly compounding outperforms annual.
 
 ### Assumptions
-Interest rate is assumed constant for the full tenure. TDS and post-tax returns are not calculated here — consult a tax advisor for net returns. Illustrative only.
+Interest rate is assumed constant for the full tenure. TDS and post-tax returns are not calculated here — consult a tax consultant for net returns. Illustrative only.

@@ -10,10 +10,10 @@ A calculator suggesting a starting asset allocation — how to split your invest
 A widely-used starting guideline is "100 minus your age" as your equity percentage, then adjusted up or down based on your stated risk appetite and how long you can stay invested.
 
 ### Why it Matters
-Most investment mistakes stem not from picking the wrong fund, but from having the wrong overall mix for one's age and risk capacity — too aggressive close to a goal, or too conservative decades before one. This calculator gives a sensible starting point to discuss with your advisor.
+Most investment mistakes stem not from picking the wrong fund, but from having the wrong overall mix for one's age and risk capacity — too aggressive close to a goal, or too conservative decades before one. This calculator gives a sensible starting point to discuss with your consultant.
 
 ### How to Use it
 Enter your age, how you'd describe your risk comfort, and your investment horizon. Use the suggested split as a starting conversation, not a final answer.
 
 ### Note
-This is a general guideline, not personalized advice. Your actual allocation should also consider your specific goals, existing portfolio, and risk capacity — best discussed directly with an advisor.
+This is a general guideline, not personalized advice. Your actual allocation should also consider your specific goals, existing portfolio, and risk capacity — best discussed directly with a consultant.

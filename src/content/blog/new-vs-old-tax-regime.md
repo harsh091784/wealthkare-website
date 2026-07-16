@@ -21,4 +21,4 @@ There's also a behavioural angle worth naming. The Old Regime nudges you toward 
 
 The practical step is simple: calculate your tax under both regimes with your actual numbers before filing. Don't guess. A few minutes of comparison can save you tens of thousands of rupees.
 
-Tax laws are subject to change. This article reflects general principles and is for educational purposes only. Please consult a qualified tax advisor for your specific situation.
+Tax laws are subject to change. This article reflects general principles and is for educational purposes only. Please consult a qualified tax expert for your specific situation.

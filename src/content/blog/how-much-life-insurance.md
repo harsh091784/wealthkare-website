@@ -23,4 +23,4 @@ Cover needs aren't static either. A newly married 28-year-old with no children n
 
 The goal of life insurance isn't to leave behind a windfall. It's to ensure your absence doesn't force your family into financial hardship on top of everything else they're already facing.
 
-This article is for educational purposes only and does not constitute insurance advice. Individual cover requirements should be assessed with a qualified advisor.
+This article is for educational purposes only and does not constitute insurance advice. Individual cover requirements should be assessed with a qualified specialist.

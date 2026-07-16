@@ -2741,8 +2741,8 @@ export const CALCULATOR_MODULES: CalculatorModule[] = [
     },
   },
   {
-    id: "tax-regime-advisor",
-    name: "Regime Switch Advisor",
+    id: "tax-regime-guide",
+    name: "Regime Switch Guide",
     headline: "Salaried quick check between old vs new tax regime.",
     inputs: [
       { id: "annualIncome", label: "Annual Income", min: 250000, max: 5000000, step: 50000, defaultValue: 1200000, format: (v) => formatIndianCurrency(v) },
@@ -2798,7 +2798,7 @@ export const CALCULATOR_MODULES: CalculatorModule[] = [
         chartType: "none",
         customResultLabel: "RECOMMENDED REGIME TAX",
         extraMetrics: [
-          { label: "Advisor Verdict", value: finalNew < finalOld ? `New Regime saves you ${formatIndianCurrency(diff)}` : finalOld < finalNew ? `Old Regime saves you ${formatIndianCurrency(diff)}` : "Both options are equal" },
+          { label: "Verdict", value: finalNew < finalOld ? `New Regime saves you ${formatIndianCurrency(diff)}` : finalOld < finalNew ? `Old Regime saves you ${formatIndianCurrency(diff)}` : "Both options are equal" },
           { label: "Old Regime Tax", value: formatIndianCurrency(finalOld) },
           { label: "New Regime Tax", value: formatIndianCurrency(finalNew) },
         ],
@@ -2956,7 +2956,7 @@ export const CATEGORIES_REGISTRY: CategoryData[] = [
       { id: "income-tax", name: "Income Tax Calculator", isBuilt: true },
       { id: "capital-gains", name: "Capital Gains Tax Estimator", isBuilt: true },
       { id: "hra-calc", name: "HRA Tax Exemption Calculator", isBuilt: true },
-      { id: "tax-regime-advisor", name: "Regime Switch Advisor", isBuilt: true },
+      { id: "tax-regime-guide", name: "Regime Switch Guide", isBuilt: true },
     ],
   },
   {

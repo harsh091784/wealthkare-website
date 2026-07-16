@@ -21,4 +21,4 @@ Perhaps the most overlooked element of a durable plan is behavioural realism —
 
 A financial plan's real test isn't how well it performs on paper under ideal assumptions. It's how well it holds up when a job is lost, a market falls, a medical emergency arrives, or priorities genuinely shift — because at some point during a multi-decade plan, several of these will happen. Building for that reality, rather than around it, is what separates a plan that survives from one that merely looks good in a projection.
 
-This article is for educational purposes only and does not constitute financial, insurance, or investment advice. Individual planning should be conducted with a qualified advisor.
+This article is for educational purposes only and does not constitute financial, insurance, or investment advice. Individual planning should be conducted with a qualified expert.

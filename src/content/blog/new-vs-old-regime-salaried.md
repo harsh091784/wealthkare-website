@@ -21,4 +21,4 @@ One practical note: salaried employees can switch regimes every financial year (
 
 The honest answer to "which regime should I pick" is: run both calculations with this year's actual numbers, not last year's assumption.
 
-Tax laws are subject to change. This article reflects general principles and is for educational purposes only. Please consult a qualified tax advisor for your specific situation.
+Tax laws are subject to change. This article reflects general principles and is for educational purposes only. Please consult a qualified tax expert for your specific situation.

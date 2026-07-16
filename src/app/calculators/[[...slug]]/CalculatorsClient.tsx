@@ -1052,7 +1052,7 @@ export default function CalculatorsClient({ initialSlug, explainers }: Props) {
                                 const val2Percent = (val2 / maxVal) * 100;
 
                                 // For tax, lower is cheaper (saves). For returns/corpus, higher is cheaper (saves/earns).
-                                const isTax = ["income-tax", "capital-gains", "hra-calc", "tax-regime-advisor"].includes(activeTab);
+                                const isTax = ["income-tax", "capital-gains", "hra-calc", "tax-regime-guide"].includes(activeTab);
                                 const val1Cheaper = isTax ? (val1 < val2) : (val1 > val2);
                                 const val2Cheaper = isTax ? (val2 < val1) : (val2 > val1);
 
@@ -1209,10 +1209,10 @@ export default function CalculatorsClient({ initialSlug, explainers }: Props) {
                             let disclaimerText = "";
                             if (["post-office", "ssy", "scss", "ppf"].includes(activeTab)) {
                               disclaimerText = "Interest rates are set by GoI and revised periodically. Current rates used for illustration.";
-                            } else if (["income-tax", "capital-gains", "hra-calc", "tax-regime-advisor"].includes(activeTab)) {
-                              disclaimerText = "Based on FY2025-26 tax rates. Tax laws change. Consult a tax advisor.";
+                            } else if (["income-tax", "capital-gains", "hra-calc", "tax-regime-guide"].includes(activeTab)) {
+                              disclaimerText = "Based on FY2025-26 tax rates. Tax laws change. Consult a tax consultant.";
                             } else if (["hlv-calc", "term-life", "health-ins", "income-protection"].includes(activeTab)) {
-                              disclaimerText = "Cover amounts are illustrative guidelines. Consult an advisor for your specific needs.";
+                              disclaimerText = "Cover amounts are illustrative guidelines. Consult a specialist for your specific needs.";
                             } else if (activeTab === "ulip-calc") {
                               disclaimerText = "ULIP charges and returns vary significantly by product and insurer.";
                             } else if (activeTab === "rolling-returns") {

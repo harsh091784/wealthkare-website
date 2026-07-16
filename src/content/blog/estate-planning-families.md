@@ -23,4 +23,4 @@ The kindest thing you can do for the people you love is to make their hardest da
 
 Start the conversation. It's uncomfortable for an afternoon, and invaluable for a lifetime.
 
-This article is for educational purposes only and does not constitute legal or financial advice. Please consult a qualified legal advisor for estate planning specific to your situation.
+This article is for educational purposes only and does not constitute legal or financial advice. Please consult a qualified legal expert for estate planning specific to your situation.

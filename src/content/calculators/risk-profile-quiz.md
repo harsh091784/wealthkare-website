@@ -13,4 +13,4 @@ Each answer is scored on a 1-5 scale across dimensions of experience, emotional 
 Risk profile mismatches — an aggressive portfolio for a conservative investor, or vice versa — are one of the leading causes of poor investment outcomes, usually because the investor panics and exits at the wrong time. Knowing your actual risk profile before investing prevents this.
 
 ### How to Use it
-Answer all 8 questions honestly — there are no right or wrong answers, only accurate or inaccurate ones. Your result is a starting point for a deeper conversation with your advisor about portfolio construction.
+Answer all 8 questions honestly — there are no right or wrong answers, only accurate or inaccurate ones. Your result is a starting point for a deeper conversation with your consultant about portfolio construction.

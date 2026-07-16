@@ -1,6 +1,6 @@
 ---
-title: "Regime Switch Advisor"
-slug: "tax-regime-advisor"
+title: "Regime Switch Guide"
+slug: "tax-regime-guide"
 ---
 
 ### What is it?

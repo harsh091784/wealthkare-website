@@ -16,4 +16,4 @@ STP solves the biggest dilemma of lumpsum investing — deploying a large amount
 Enter your lumpsum corpus, monthly transfer amount, both funds' expected returns, and the duration. The chart shows your money migrating from safety to growth.
 
 ### Assumptions
-Returns assumed constant for both funds. Exit loads and taxation on transfers (each transfer is a redemption) are not included — consult a tax advisor. Illustrative only.
+Returns assumed constant for both funds. Exit loads and taxation on transfers (each transfer is a redemption) are not included — consult a tax consultant. Illustrative only.

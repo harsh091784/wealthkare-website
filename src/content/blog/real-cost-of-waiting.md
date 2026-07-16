@@ -1,13 +1,13 @@
 ---
 title: "The Real Cost of Waiting to Start Investing"
-excerpt: "Every financial advisor says the same thing: start early. It's repeated so often it's become background noise — a cliché people nod along to without absorbing. But the actual magnitude of what delay costs is rarely made concrete, and once you see the numbers, the advice stops sounding like a platitude."
+excerpt: "Every financial expert says the same thing: start early. It's repeated so often it's become background noise — a cliché people nod along to without absorbing. But the actual magnitude of what delay costs is rarely made concrete, and once you see the numbers, the advice stops sounding like a platitude."
 date: "2026-06-10"
 dateLabel: "June 2026"
 thumbnail: "/images/blog/estate-planning.png"
 slug: "real-cost-of-waiting"
 category: "Personal Finance"
 ---
-Every financial advisor says the same thing: start early. It's repeated so often it's become background noise — a cliché people nod along to without absorbing. But the actual magnitude of what delay costs is rarely made concrete, and once you see the numbers, the advice stops sounding like a platitude.
+Every financial expert says the same thing: start early. It's repeated so often it's become background noise — a cliché people nod along to without absorbing. But the actual magnitude of what delay costs is rarely made concrete, and once you see the numbers, the advice stops sounding like a platitude.
 
 Consider two investors. The first starts a ₹10,000 monthly SIP at age 25 and continues for 35 years until 60, investing a total of ₹42 lakhs. The second waits until 35 to start the same ₹10,000 SIP, investing for 25 years until 60 — a total of ₹30 lakhs. The second investor actually invested only ₹12 lakhs less in total contributions. Yet at a steady growth assumption, the first investor's final corpus can end up nearly double the second's — not because they invested dramatically more, but because their money had ten additional years to compound.
 

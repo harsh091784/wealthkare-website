@@ -16,4 +16,4 @@ Selling at the wrong time can trigger significantly higher tax. An equity invest
 Select the asset type, enter purchase price, sale price, purchase date, and sale date. The calculator auto-classifies the gain and applies the correct current tax rate.
 
 ### Note
-Tax laws changed significantly in Budget 2024. Rates shown reflect post-Budget 2024 rules. Tax laws are subject to further change — consult a tax advisor for your specific situation. Illustrative only.
+Tax laws changed significantly in Budget 2024. Rates shown reflect post-Budget 2024 rules. Tax laws are subject to further change — consult a tax consultant for your specific situation. Illustrative only.

@@ -23,4 +23,4 @@ This is why a proper risk assessment asks structured questions rather than a sin
 
 The best portfolio isn't the one with the highest theoretical return. It's the one you can hold onto without panicking — because you understood your real risk profile before you needed to.
 
-This article is for educational purposes only and does not constitute investment advice. Individual risk assessment should be conducted with a qualified advisor.
+This article is for educational purposes only and does not constitute investment advice. Individual risk assessment should be conducted with a qualified specialist.

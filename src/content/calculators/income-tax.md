@@ -16,4 +16,4 @@ The right regime choice depends on your income level and how many deductions you
 Enter your annual income, standard deduction, 80C investments, 80D health insurance premium, HRA exemption, NPS 80CCD(1B) contribution, and other deductions. The calculator shows your tax under both regimes side by side and highlights which one saves you more.
 
 ### Assumptions
-Based on FY2025-26 tax slabs and rates. Surcharge applicable for incomes above ₹50 lakhs is included. Tax laws are subject to change — consult a qualified tax advisor for your specific situation. Illustrative only.
+Based on FY2025-26 tax slabs and rates. Surcharge applicable for incomes above ₹50 lakhs is included. Tax laws are subject to change — consult a qualified tax expert for your specific situation. Illustrative only.

@@ -22,4 +22,4 @@ Term insurance should be purchased as early as possible for two compounding reas
 
 It's worth being clear about what term insurance is not: it's not an investment, and comparing its premium unfavourably against investment-linked products misunderstands its purpose. Every rupee of a term premium goes toward pure protection — which is precisely why it's the most cost-efficient way to secure adequate cover, leaving investment decisions to be made separately, through instruments actually designed for growth.
 
-This article is for educational purposes only and does not constitute insurance advice. Individual cover and rider selection should be assessed with a qualified advisor.
+This article is for educational purposes only and does not constitute insurance advice. Individual cover and rider selection should be assessed with a qualified expert.

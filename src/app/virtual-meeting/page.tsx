@@ -74,7 +74,7 @@ export default function VirtualMeetingPage() {
             Virtual Financial <span className="text-brand-gold">Meeting</span>
           </h1>
           <p className="text-xs sm:text-sm text-gray-500 font-semibold leading-relaxed">
-            Connect with our expert advisors from anywhere. Select your preferred slot or complete our instant digital portfolio review.
+            Connect with our wealth experts from anywhere. Select your preferred slot or complete our instant digital portfolio review.
           </p>
         </div>
 
