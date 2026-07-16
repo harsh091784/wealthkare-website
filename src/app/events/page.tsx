@@ -8,14 +8,16 @@ import eventsData from "@/content/events.json";
 interface EventItem {
   id: string;
   name: string;
-  date: string;
+  type?: "full" | "gallery";
+  date?: string;
   venue?: string;
   thumbnail: string;
-  detailImage1: string;
-  detailImage2: string;
-  heading1: string;
-  heading2: string;
-  description: string;
+  detailImage1?: string;
+  detailImage2?: string;
+  heading1?: string;
+  heading2?: string;
+  description?: string;
+  images?: string[];
 }
 
 export default function EventsPage() {
@@ -169,42 +171,77 @@ export default function EventsPage() {
                 {selectedEvent.name}
               </h2>
 
-              {/* ONE Featured Image, large and prominent */}
-              <div className="w-full aspect-[16/9] md:aspect-[21/9] rounded-3xl overflow-hidden bg-gray-900 border border-white/10 shadow-[0_25px_60px_rgba(0,0,0,0.5)] flex-shrink-0 relative group">
-                <img
-                  src={selectedEvent.detailImage1}
-                  alt={`${selectedEvent.name} featured image`}
-                  className="w-full h-full object-cover"
-                />
-                <div className="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent pointer-events-none" />
-              </div>
+              {/* Check if it is a gallery type event */}
+              {selectedEvent.type === "gallery" ? (
+                <>
+                  {/* Optional Date below name */}
+                  {selectedEvent.date && (
+                    <div className="text-center mb-8 -mt-4">
+                      <span className="text-[10px] sm:text-xs font-black tracking-widest text-[#BD924D] uppercase">
+                        Date: <span className="text-gray-300 ml-1 font-semibold normal-case tracking-normal text-xs sm:text-sm">{selectedEvent.date}</span>
+                      </span>
+                    </div>
+                  )}
 
-              {/* Event Description */}
-              <p className="text-gray-300 text-sm sm:text-base font-semibold leading-relaxed text-justify mt-6 max-w-3xl">
-                {selectedEvent.description}
-              </p>
-
-              {/* Date & Venue below description */}
-              <div className="w-full max-w-3xl flex flex-col sm:flex-row sm:justify-between items-center sm:items-start gap-4 mt-6 text-center sm:text-left border-t border-white/10 pt-6">
-                {selectedEvent.venue && (
-                  <div className="flex flex-col gap-1 items-center sm:items-start">
-                    <span className="text-[10px] font-black tracking-widest text-[#BD924D] uppercase">
-                      Venue
-                    </span>
-                    <span className="text-xs sm:text-sm text-gray-300 font-semibold max-w-md">
-                      {selectedEvent.venue}
-                    </span>
+                  {/* Responsive grid for photo gallery */}
+                  <div className="w-full grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 mt-4">
+                    {selectedEvent.images?.map((imgSrc, idx) => (
+                      <div
+                        key={idx}
+                        className="w-full aspect-[4/3] rounded-2xl overflow-hidden border border-white/10 shadow-lg relative group bg-gray-900"
+                      >
+                        <img
+                          src={imgSrc}
+                          alt={`${selectedEvent.name} photo ${idx + 1}`}
+                          className="w-full h-full object-cover transition-transform duration-500 ease-out group-hover:scale-105"
+                        />
+                        <div className="absolute inset-0 bg-black/10 group-hover:bg-transparent transition-colors duration-300 pointer-events-none" />
+                      </div>
+                    ))}
                   </div>
-                )}
-                <div className="flex flex-col gap-1 items-center sm:items-end sm:ml-auto">
-                  <span className="text-[10px] font-black tracking-widest text-[#BD924D] uppercase">
-                    Date
-                  </span>
-                  <span className="text-xs sm:text-sm text-gray-300 font-semibold">
-                    {selectedEvent.date}
-                  </span>
-                </div>
-              </div>
+                </>
+              ) : (
+                <>
+                  {/* ONE Featured Image, large and prominent */}
+                  <div className="w-full aspect-[16/9] md:aspect-[21/9] rounded-3xl overflow-hidden bg-gray-900 border border-white/10 shadow-[0_25px_60px_rgba(0,0,0,0.5)] flex-shrink-0 relative group">
+                    <img
+                      src={selectedEvent.detailImage1}
+                      alt={`${selectedEvent.name} featured image`}
+                      className="w-full h-full object-cover"
+                    />
+                    <div className="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent pointer-events-none" />
+                  </div>
+
+                  {/* Event Description */}
+                  <p className="text-gray-300 text-sm sm:text-base font-semibold leading-relaxed text-justify mt-6 max-w-3xl">
+                    {selectedEvent.description}
+                  </p>
+
+                  {/* Date & Venue below description */}
+                  <div className="w-full max-w-3xl flex flex-col sm:flex-row sm:justify-between items-center sm:items-start gap-4 mt-6 text-center sm:text-left border-t border-white/10 pt-6">
+                    {selectedEvent.venue && (
+                      <div className="flex flex-col gap-1 items-center sm:items-start">
+                        <span className="text-[10px] font-black tracking-widest text-[#BD924D] uppercase">
+                          Venue
+                        </span>
+                        <span className="text-xs sm:text-sm text-gray-300 font-semibold max-w-md">
+                          {selectedEvent.venue}
+                        </span>
+                      </div>
+                    )}
+                    {selectedEvent.date && (
+                      <div className="flex flex-col gap-1 items-center sm:items-end sm:ml-auto">
+                        <span className="text-[10px] font-black tracking-widest text-[#BD924D] uppercase">
+                          Date
+                        </span>
+                        <span className="text-xs sm:text-sm text-gray-300 font-semibold">
+                          {selectedEvent.date}
+                        </span>
+                      </div>
+                    )}
+                  </div>
+                </>
+              )}
 
               {/* "← Back to Events" Button */}
               <button

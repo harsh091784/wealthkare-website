@@ -2,6 +2,7 @@
   {
     "id": "money-alpha-summit",
     "name": "The Money Alpha 360° Summit",
+    "type": "full",
     "date": "December 17–19, 2026",
     "venue": "India Expo Centre & Mart, Knowledge Park II, Greater Noida, Delhi-NCR, India",
     "thumbnail": "/images/events/money_alpha_grid.jpg",
@@ -12,8 +13,23 @@
     "description": "The Money Alpha 360° Summit is a major fintech and finance event held in Greater Noida uniting investments, wealth management, and emerging tech. Following an initial launch summit in April, the expansive main convergence is scheduled for later in the year."
   },
   {
+    "id": "anniversary-21",
+    "name": "21st Anniversary",
+    "type": "gallery",
+    "date": "July 3, 2024",
+    "thumbnail": "/images/events/anniversary_1.png",
+    "images": [
+      "/images/events/anniversary_1.png",
+      "/images/events/anniversary_2.png",
+      "/images/events/anniversary_3.png",
+      "/images/events/anniversary_4.png",
+      "/images/events/anniversary_5.png"
+    ]
+  },
+  {
     "id": "wc-event",
     "name": "WC Event",
+    "type": "full",
     "date": "May, 2026",
     "thumbnail": "/images/events/event_mosaic_5.png",
     "detailImage1": "/images/events/event_mosaic_1.jpg",
@@ -25,6 +41,7 @@
   {
     "id": "wealth-event",
     "name": "Wealth Event",
+    "type": "full",
     "date": "May, 2026",
     "thumbnail": "/images/events/event_mosaic_3.png",
     "detailImage1": "/images/events/event_mosaic_4.png",
@@ -36,6 +53,7 @@
   {
     "id": "mutual-funds-event",
     "name": "Mutual Funds Event",
+    "type": "full",
     "date": "May, 2026",
     "thumbnail": "/images/events/event_mosaic_1.jpg",
     "detailImage1": "/images/events/event_mosaic_6.png",
@@ -47,6 +65,7 @@
   {
     "id": "partnership-event",
     "name": "Partnership Event",
+    "type": "full",
     "date": "May, 2026",
     "thumbnail": "/images/events/event_mosaic_6.png",
     "detailImage1": "/images/events/event_mosaic_3.png",
@@ -58,6 +77,7 @@
   {
     "id": "invest-india",
     "name": "InVest India",
+    "type": "full",
     "date": "May, 2026",
     "thumbnail": "/images/events/event_mosaic_2.jpg",
     "detailImage1": "/images/events/event_mosaic_4.png",
@@ -69,6 +89,7 @@
   {
     "id": "real-tech",
     "name": "Real Tech",
+    "type": "full",
     "date": "May, 2026",
     "thumbnail": "/images/events/event_mosaic_4.png",
     "detailImage1": "/images/events/event_featured.jpg",
@@ -80,6 +101,7 @@
   {
     "id": "forex",
     "name": "ForEX",
+    "type": "full",
     "date": "May, 2026",
     "thumbnail": "/images/events/event_mosaic_5.png",
     "detailImage1": "/images/events/event_mosaic_1.jpg",
@@ -91,6 +113,7 @@
   {
     "id": "2k26",
     "name": "2K26",
+    "type": "full",
     "date": "May, 2026",
     "thumbnail": "/images/events/event_mosaic_3.png",
     "detailImage1": "/images/events/event_mosaic_6.png",
