@@ -58,6 +58,14 @@
     ]
   },
   {
+    "id": "zee-business-tax",
+    "name": "Income Tax Discussion on Zee Business",
+    "type": "full",
+    "thumbnail": "/images/events/zee_business_tax.jpg",
+    "detailImage1": "/images/events/zee_business_tax.jpg",
+    "description": "Mukesh Gupta featured on Zee Business, sharing expert insights on income tax planning and strategy."
+  },
+  {
     "id": "wc-event",
     "name": "WC Event",
     "type": "full",
