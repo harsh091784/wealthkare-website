@@ -66,6 +66,16 @@
     "description": "Mukesh Gupta featured on Zee Business, sharing expert insights on income tax planning and strategy."
   },
   {
+    "id": "investor-awareness",
+    "name": "Investor Awareness Program - South Delhi",
+    "type": "gallery",
+    "thumbnail": "/images/events/investor_awareness_1.jpg",
+    "images": [
+      "/images/events/investor_awareness_1.jpg",
+      "/images/events/investor_awareness_2.jpg"
+    ]
+  },
+  {
     "id": "wc-event",
     "name": "WC Event",
     "type": "full",
