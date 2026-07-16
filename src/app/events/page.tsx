@@ -160,7 +160,7 @@ export default function EventsPage() {
 
               {/* Right Section (Main Grid) */}
               <div className="w-full lg:w-[72%]">
-                <div className="grid grid-cols-2 md:grid-cols-3 gap-0 border border-white/10 rounded-[32px] overflow-hidden bg-black/40 shadow-2xl relative">
+                <div className="grid grid-cols-2 lg:grid-cols-4 gap-0 border border-white/10 rounded-[32px] overflow-hidden bg-black/40 shadow-2xl relative">
                   {eventsData.map((event) => (
                     <div
                       key={event.id}
