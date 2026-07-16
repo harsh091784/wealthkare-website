@@ -47,6 +47,17 @@
     "description": "Nominated for the CNBC Financial Advisor Award, recognizing excellence in financial advisory services."
   },
   {
+    "id": "office-inauguration",
+    "name": "Office Inauguration - Noida",
+    "type": "gallery",
+    "date": "April 23, 2024",
+    "thumbnail": "/images/events/office_inauguration_1.jpg",
+    "images": [
+      "/images/events/office_inauguration_1.jpg",
+      "/images/events/office_inauguration_2.jpg"
+    ]
+  },
+  {
     "id": "wc-event",
     "name": "WC Event",
     "type": "full",
