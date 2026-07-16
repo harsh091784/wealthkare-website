@@ -27,6 +27,18 @@
     ]
   },
   {
+    "id": "client-meet-up",
+    "name": "Client Meet Up",
+    "type": "gallery",
+    "thumbnail": "/images/events/client_meet_1.jpg",
+    "images": [
+      "/images/events/client_meet_1.jpg",
+      "/images/events/client_meet_2.jpg",
+      "/images/events/client_meet_3.jpg",
+      "/images/events/client_meet_4.jpg"
+    ]
+  },
+  {
     "id": "wc-event",
     "name": "WC Event",
     "type": "full",

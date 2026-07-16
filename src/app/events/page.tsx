@@ -26,7 +26,44 @@ export default function EventsPage() {
   const [gridOpacity, setGridOpacity] = useState(100);
   const [detailOpacity, setDetailOpacity] = useState(0);
 
+  const [activeImgIndex, setActiveImgIndex] = useState(0);
+
   const selectedEvent = eventsData.find((e) => e.id === selectedEventId) as EventItem | undefined;
+
+  // Reset active slide when entering/leaving an event details view
+  useEffect(() => {
+    setActiveImgIndex(0);
+  }, [selectedEventId]);
+
+  // Auto scroll logic for gallery event carousels
+  useEffect(() => {
+    if (
+      !selectedEvent ||
+      selectedEvent.type !== "gallery" ||
+      !selectedEvent.images ||
+      selectedEvent.images.length === 0
+    ) {
+      return;
+    }
+    const interval = setInterval(() => {
+      setActiveImgIndex((prev) => (prev + 1) % selectedEvent.images!.length);
+    }, 4000);
+    return () => clearInterval(interval);
+  }, [selectedEvent, selectedEventId]);
+
+  const nextImage = () => {
+    if (selectedEvent?.images) {
+      setActiveImgIndex((prev) => (prev + 1) % selectedEvent.images!.length);
+    }
+  };
+
+  const prevImage = () => {
+    if (selectedEvent?.images) {
+      setActiveImgIndex(
+        (prev) => (prev - 1 + selectedEvent.images!.length) % selectedEvent.images!.length
+      );
+    }
+  };
 
   const handleTileClick = (eventId: string) => {
     setSelectedEventId(eventId);
@@ -183,21 +220,54 @@ export default function EventsPage() {
                     </div>
                   )}
 
-                  {/* Responsive grid for photo gallery */}
-                  <div className="w-full grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 mt-4">
+                  {/* Auto-scroll cross-fade carousel */}
+                  <div className="w-full max-w-3xl aspect-[16/9] md:aspect-[21/9] rounded-3xl overflow-hidden bg-gray-900 border border-white/10 shadow-[0_25px_60px_rgba(0,0,0,0.5)] relative group mt-4">
                     {selectedEvent.images?.map((imgSrc, idx) => (
-                      <div
+                      <img
                         key={idx}
-                        className="w-full aspect-[4/3] rounded-2xl overflow-hidden border border-white/10 shadow-lg relative group bg-gray-900"
-                      >
-                        <img
-                          src={imgSrc}
-                          alt={`${selectedEvent.name} photo ${idx + 1}`}
-                          className="w-full h-full object-cover transition-transform duration-500 ease-out group-hover:scale-105"
-                        />
-                        <div className="absolute inset-0 bg-black/10 group-hover:bg-transparent transition-colors duration-300 pointer-events-none" />
-                      </div>
+                        src={imgSrc}
+                        alt={`${selectedEvent.name} slide ${idx + 1}`}
+                        className={`absolute inset-0 w-full h-full object-cover transition-all duration-1000 ease-in-out ${
+                          idx === activeImgIndex ? "opacity-100 scale-100 z-10" : "opacity-0 scale-95 z-0 pointer-events-none"
+                        }`}
+                      />
                     ))}
+
+                    {/* Gradient overlay inside carousel */}
+                    <div className="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent pointer-events-none z-10" />
+
+                    {/* Left arrow manual control */}
+                    <button
+                      onClick={prevImage}
+                      className="absolute left-4 top-1/2 -translate-y-1/2 z-20 bg-black/40 hover:bg-[#BD924D] text-white p-2.5 sm:p-3.5 rounded-full border border-white/10 backdrop-blur-md hover:border-transparent transition-all duration-300 transform active:scale-95 cursor-pointer"
+                    >
+                      <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={3} stroke="currentColor" className="w-4 h-4 sm:w-5 sm:h-5">
+                        <path strokeLinecap="round" strokeLinejoin="round" d="M15.75 19.5L8.25 12l7.5-7.5" />
+                      </svg>
+                    </button>
+
+                    {/* Right arrow manual control */}
+                    <button
+                      onClick={nextImage}
+                      className="absolute right-4 top-1/2 -translate-y-1/2 z-20 bg-black/40 hover:bg-[#BD924D] text-white p-2.5 sm:p-3.5 rounded-full border border-white/10 backdrop-blur-md hover:border-transparent transition-all duration-300 transform active:scale-95 cursor-pointer"
+                    >
+                      <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={3} stroke="currentColor" className="w-4 h-4 sm:w-5 sm:h-5">
+                        <path strokeLinecap="round" strokeLinejoin="round" d="M8.25 4.5l7.5 7.5-7.5 7.5" />
+                      </svg>
+                    </button>
+
+                    {/* Dot indicators at the bottom */}
+                    <div className="absolute bottom-4 left-1/2 -translate-x-1/2 z-20 flex gap-2">
+                      {selectedEvent.images?.map((_, idx) => (
+                        <button
+                          key={idx}
+                          onClick={() => setActiveImgIndex(idx)}
+                          className={`h-1.5 rounded-full transition-all duration-500 cursor-pointer ${
+                            idx === activeImgIndex ? "w-5 sm:w-6 bg-[#BD924D]" : "w-1.5 bg-white/40 hover:bg-white/70"
+                          }`}
+                        />
+                      ))}
+                    </div>
                   </div>
                 </>
               ) : (
