@@ -204,45 +204,46 @@
     "eyebrow": "TRUSTED ENGAGEMENTS",
     "headline": "Our Events",
     "featured": {
+      "id": "money-alpha-summit",
       "image": "/images/events/event_featured.jpg",
-      "caption": "Annual Investor Summit 2025 — Founder Mukesh Gupta addressing clients on long-term wealth strategy."
+      "caption": "The Money Alpha 360° Summit — Mukesh Gupta addressing clients on long-term wealth strategy."
     },
     "mosaic": [
       {
-        "id": 1,
-        "image": "/images/events/event_mosaic_1.jpg",
-        "alt": "WealthKare team at event booth",
-        "caption": "Wealthkare Expo Booth · 2024"
+        "id": "anniversary-21",
+        "image": "/images/events/anniversary_1.png",
+        "alt": "21st Anniversary Celebration",
+        "caption": "21st Anniversary Celebration"
       },
       {
-        "id": 2,
-        "image": "/images/events/event_mosaic_2.jpg",
-        "alt": "WealthKare representatives presenting awards",
-        "caption": "Investor Networking · 2024"
+        "id": "client-meet-up",
+        "image": "/images/events/client_meet_1.jpg",
+        "alt": "Client Meet Up",
+        "caption": "WealthKare Client Meet Up"
       },
       {
-        "id": 3,
-        "image": "/images/events/event_mosaic_3.png",
-        "alt": "Seminar audience",
-        "caption": "Global Markets Summit · 2024"
+        "id": "cnbc-award",
+        "image": "/images/events/cnbc_award.png",
+        "alt": "CNBC Financial Advisor Award Nomination",
+        "caption": "CNBC Financial Advisor Award"
       },
       {
-        "id": 4,
-        "image": "/images/events/event_mosaic_4.png",
-        "alt": "Networking reception",
-        "caption": "Client Evening · 2024"
+        "id": "office-inauguration",
+        "image": "/images/events/office_inauguration_1.jpg",
+        "alt": "Noida Office Inauguration",
+        "caption": "Noida Office Inauguration"
       },
       {
-        "id": 5,
-        "image": "/images/events/event_mosaic_5.png",
-        "alt": "Finance workshop roundtable",
-        "caption": "Strategy Workshop · 2024"
+        "id": "zee-business-tax",
+        "image": "/images/events/zee_business_tax.jpg",
+        "alt": "Income Tax Discussion on Zee Business",
+        "caption": "Zee Business Tax Discussion"
       },
       {
-        "id": 6,
-        "image": "/images/events/event_mosaic_6.png",
-        "alt": "Conference keynote address",
-        "caption": "Market Trends Briefing · 2024"
+        "id": "ca-program",
+        "image": "/images/events/ca_program_1.jpg",
+        "alt": "Financial Literacy Program for Chartered Accountants",
+        "caption": "CA Financial Literacy Program"
       }
     ]
   }

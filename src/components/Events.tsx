@@ -35,7 +35,10 @@ export default function Events() {
         <div className="w-full grid grid-cols-1 lg:grid-cols-2 gap-0 bg-white rounded-3xl overflow-visible shadow-[0_20px_50px_rgba(42,32,24,0.08)] border border-gray-200/40 relative">
           
           {/* LEFT: Featured Image Card */}
-          <div className="relative group overflow-hidden rounded-t-3xl lg:rounded-t-none lg:rounded-l-3xl h-[380px] lg:h-[540px] cursor-pointer transition-all duration-300 hover:shadow-[0_25px_50px_rgba(0,0,0,0.22)] hover:-translate-y-1.5 z-10 hover:z-30">
+          <Link
+            href={`/events?event=${featured.id || "money-alpha-summit"}`}
+            className="block relative group overflow-hidden rounded-t-3xl lg:rounded-t-none lg:rounded-l-3xl h-[380px] lg:h-[540px] cursor-pointer transition-all duration-300 hover:shadow-[0_25px_50px_rgba(0,0,0,0.22)] hover:-translate-y-1.5 z-10 hover:z-30"
+          >
             <img
               src={featured.image}
               alt="Mukesh Gupta addressing clients at WealthKare Event"
@@ -53,7 +56,7 @@ export default function Events() {
                 {featured.caption}
               </p>
             </div>
-          </div>
+          </Link>
 
           {/* RIGHT: 2x3 Mosaic Grid (6 images) */}
           <div className="relative rounded-b-3xl lg:rounded-b-none lg:rounded-r-3xl overflow-hidden grid grid-cols-2 grid-rows-3 h-[450px] lg:h-[540px]">
@@ -62,8 +65,9 @@ export default function Events() {
               const isRear = idx >= 4;
 
               return (
-                <div
+                <Link
                   key={item.id}
+                  href={`/events?event=${item.id}`}
                   className="relative group overflow-hidden cursor-pointer"
                 >
                   <img
@@ -88,7 +92,7 @@ export default function Events() {
                   {isRear && (
                     <div className="absolute inset-0 bg-gradient-to-b from-black/60 via-black/85 to-black/95 mix-blend-multiply transition-all duration-250 group-hover:opacity-0 pointer-events-none z-10" />
                   )}
-                </div>
+                </Link>
               );
             })}
 
