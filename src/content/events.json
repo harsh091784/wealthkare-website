@@ -76,6 +76,16 @@
     ]
   },
   {
+    "id": "ca-program",
+    "name": "Financial Literacy Program for Chartered Accountants",
+    "type": "gallery",
+    "thumbnail": "/images/events/ca_program_1.jpg",
+    "images": [
+      "/images/events/ca_program_1.jpg",
+      "/images/events/ca_program_2.jpg"
+    ]
+  },
+  {
     "id": "wc-event",
     "name": "WC Event",
     "type": "full",
